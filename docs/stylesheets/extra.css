@@ -1,11 +1,4 @@
-.md-footer__inner:not([hidden]) {
-	display: none;
-}
-
-.md-typeset .example,
-.md-typeset .note {
-	font-size: 16px;
-}
+.md-typeset .admonition { font-size: .75rem; }
 
 .md-typeset .admonition.example,
 .md-typeset .admonition.note,
