@@ -6,6 +6,7 @@ theme:
   icon:
     logo: material/language-javascript
   features:
+    - content.code.copy
     - navigation.tabs
     - navigation.sections
   palette:
