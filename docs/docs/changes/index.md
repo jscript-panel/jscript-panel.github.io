@@ -94,6 +94,9 @@ See this [page](3-1-0/).
 
 ## For `foobar2000` `1.6.6`
 
+### 3.0.13
+- Backport some fixes from the latest version.
+
 ### 3.0.12
 - Various bug fixes.
 
