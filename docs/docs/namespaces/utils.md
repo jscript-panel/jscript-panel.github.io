@@ -81,7 +81,7 @@ link for an example.
 ||text_alignment|[DWRITE_TEXT_ALIGNMENT](../../flags/#dwrite_text_alignment)|Default `0`.|
 ||paragraph_alignment|[DWRITE_PARAGRAPH_ALIGNMENT](../../flags/#dwrite_paragraph_alignment)|Default `0`.|
 ||word_wrapping|[DWRITE_WORD_WRAPPING](../../flags/#dwrite_word_wrapping)|Default `0`.|
-|:octicons-tag-24: 3.1.11|trimming_granularity|[DWRITE_TRIMMING_GRANULARITY](../../flags/#dwrite_trimming_granularity)|Default `0`.|
+|:octicons-tag-24: 3.0.13, 3.1.11|trimming_granularity|[DWRITE_TRIMMING_GRANULARITY](../../flags/#dwrite_trimming_granularity)|Default `0`.|
 
 Returns an [ITextLayout](../../interfaces/ITextLayout/) instance.
 
