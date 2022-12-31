@@ -20,6 +20,9 @@
 !!! note
 	While `foobar2000` `2.0` is `Beta`, it's strongly recommended that you use the latest version. `Beta 18` is already required for some component features.
 
+### 3.2.1
+- The `Thumbs` sample has been limited to loading no more than 64MB of images from disk.
+
 ### 3.2.0
 - See this [page](3-2-0/).
 
@@ -93,6 +96,9 @@ was not reliable and may have caused display issues in recent changes to the `Sp
 See this [page](3-1-0/).
 
 ## For `foobar2000` `1.6.6`
+
+### 3.0.14
+- The `Thumbs` sample has been limited to loading no more than 64MB of images from disk.
 
 ### 3.0.13
 - Backport some fixes from the latest version.
