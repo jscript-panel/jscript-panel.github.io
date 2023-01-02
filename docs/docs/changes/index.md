@@ -95,7 +95,7 @@ was not reliable and may have caused display issues in recent changes to the `Sp
 ### 3.1.0
 See this [page](3-1-0/).
 
-## For `foobar2000` `1.6.6`
+## For `foobar2000` `1.6.6` - `1.6.14`
 
 ### 3.0.14
 - The `Thumbs` sample has been limited to loading no more than 64MB of images from disk.
