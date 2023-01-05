@@ -20,6 +20,11 @@
 !!! note
 	While `foobar2000` `2.0` is `Beta`, it's strongly recommended that you use the latest version. `Beta 18` is already required for some component features.
 
+### 3.2.2
+- Improve behaviour of `window.GetFontCUI` / `window.GetFontDUI` so they properly handle fonts that have names which contain properties like `SemiBold`, `Condensed`, `Light` etc.
+- Fix bug with `plman.AddLocations` so items are added to the correct playlist if other playlist operations during the async process cause the `playlistIndex` of the destination playlist to change.
+- Various sample fixes.
+
 ### 3.2.1
 - The `Thumbs` sample has been limited to loading no more than 64MB of images from disk.
 
