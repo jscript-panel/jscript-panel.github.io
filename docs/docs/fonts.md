@@ -41,12 +41,17 @@ of `Segoe UI` and `16px` will be used.
 	{
 		"Name": "Segoe UI",
 		"Size": 12,
+		"Stretch": 5,
 		"Style": 0,
 		"Weight": 400
 	}
 	```
 
-See [DWRITE_FONT_STYLE](../flags/#dwrite_font_style) and [DWRITE_FONT_WEIGHT](../flags/#dwrite_font_weight).
+!!! note
+	Not all fonts supported by `Default UI` / `Columns UI` can be used by this component. This
+	is because they use older `GDI` graphics whereas this component uses `DirectWrite`. If
+	an unsupported font is detected, the method will fallback to returning `Segoe UI`. The most
+	likely cause of this happening would be using `Raster` fonts like `System` or `Small Fonts`.
 
 `font_str` can be passed directly to `gr.WriteText` without modification.
 
