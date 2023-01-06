@@ -102,6 +102,11 @@ See this [page](3-1-0/).
 
 ## For `foobar2000` `1.6.6` - `1.6.14`
 
+### 3.0.15
+- Improve behaviour of `window.GetFontCUI` / `window.GetFontDUI` so they properly handle fonts that have names which contain properties like `SemiBold`, `Condensed`, `Light` etc.
+- Fix bug with `plman.AddLocations` so items are added to the correct playlist if other playlist operations during the async process cause the `playlistIndex` of the destination playlist to change.
+- Various sample fixes.
+
 ### 3.0.14
 - The `Thumbs` sample has been limited to loading no more than 64MB of images from disk.
 
