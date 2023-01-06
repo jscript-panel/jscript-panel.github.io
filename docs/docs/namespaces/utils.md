@@ -40,6 +40,10 @@ Returns a `number`.
 
 Returns a `boolean` value.
 
+!!! note
+	If this unexpectedly returns `false` for font names you think are correct, check
+	the `basic\DWriteFonts` sample. This lists all recognised fonts.
+
 ## `utils.ColourPicker(default_colour)`
 |Arguments|||
 |---|---|---|
