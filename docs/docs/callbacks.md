@@ -163,7 +163,7 @@ Called when thread created by [utils.LoadImageAsync](../namespaces/utils/#utilsl
 Called when thread created by [fb.AddLocationsAsync](../namespaces/fb/#fbaddlocationsasyncwindow_id-paths) is done.
 
 ## `on_main_menu(index)`
-:octicons-tag-24: 3.1.0
+:octicons-tag-24: 3.0.16, 3.1.0
 
 |Arguments|||
 |---|---|---|
@@ -200,7 +200,7 @@ what other users may already be using.
 ||Arguments|||
 |---|---|---|---|
 ||handle_list|[IMetadbHandleList](../interfaces/IMetadbHandleList/)|
-|:octicons-tag-24: 3.1.1|fromhook|`boolean`|`true` if changes comes from `Playback Statistics` or other components that utilise the same DB functionality.
+|:octicons-tag-24: 3.0.16, 3.1.1|fromhook|`boolean`|`true` if changes comes from `Playback Statistics` or other components that utilise the same DB functionality.
 
 Called when metadb contents change. This can be tag updates or database changes from `Playback Statistics` etc.
 

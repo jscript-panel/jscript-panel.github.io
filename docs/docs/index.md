@@ -1,3 +1,6 @@
+There are 2 separate versions available. The `3.0.x` series is for compatibility
+with `foobar2000` `1.6.6+`. The `3.2.x` series is for `foobar2000` `2.0 Beta 18+`.
+
 ## Minimum requirements
 `Windows 7` is the minimum requirement for all versions.
 
