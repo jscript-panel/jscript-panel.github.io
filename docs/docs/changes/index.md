@@ -102,6 +102,10 @@ See this [page](3-1-0/).
 
 ## For `foobar2000` `1.6.6` - `1.6.14`
 
+### 3.0.16
+- Restore the `on_main_menu` callback.
+- Restore the `fromhook` argument to `on_metadb_changed`.
+
 ### 3.0.15
 - Update `window.GetFontCUI` / `window.GetFontDUI` so they properly handle font names which contain properties like `SemiBold`, `Condensed`, `Light` etc.
 - Fix bug with `plman.AddLocations` so items are added to the correct playlist if other playlist operations during the async process cause the `playlistIndex` of the destination playlist to change.
