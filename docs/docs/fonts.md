@@ -25,8 +25,9 @@ of `Segoe UI` and `16px` will be used.
 
 !!! example
 	```js
-	// 2nd parameter is the font
-	gr.WriteText("some text", "", colour, 0, 0, window.Width, window.Height);
+	var font_str = "";
+	var colour = RGB(0, 0, 0);
+	gr.WriteText("some text", font_str, colour, 0, 0, window.Width, window.Height);
 	```
 
 ## Using `window.GetFontCUI` / `window.GetFontDUI`.
@@ -47,13 +48,24 @@ of `Segoe UI` and `16px` will be used.
 	}
 	```
 
+`font_str` can be passed directly to `gr.WriteText` without modification.
+
+!!! example
+	```js
+	var font_str = window.GetFontDUI(0);
+	var colour = RGB(0, 0, 0);
+
+	function on_paint(gr) {
+		gr.WriteText("some text", font_str, colour, 0, 0, window.Width, window.Height);
+	}
+	```
+
+
 !!! note
 	Not all fonts supported by `Default UI` / `Columns UI` can be used by this component. This
 	is because they use older `GDI` graphics whereas this component uses `DirectWrite`. If
 	an unsupported font is detected, the method will fallback to returning `Segoe UI`. The most
 	likely cause of this happening would be using `Raster` fonts like `System` or `Small Fonts`.
-
-`font_str` can be passed directly to `gr.WriteText` without modification.
 
 If you want to manipulate any of the properties, you can use `JSON.parse` on the string, make the changes
 and then stringify it again.
