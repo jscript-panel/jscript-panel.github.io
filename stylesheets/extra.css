@@ -1,0 +1,32 @@
+.md-nav__link[for] { color: var(--md-default-fg-color) !important }
+.md-nav__title[for] { color: var(--md-default-fg-color) }
+.md-typeset .admonition { font-size: .75rem; }
+
+.md-typeset .admonition.example,
+.md-typeset .admonition.note,
+.md-typeset details.example,
+.md-typeset details.note {
+	border-color: rgb(232, 32, 99);
+}
+
+.md-typeset .example > .admonition-title,
+.md-typeset .note > .admonition-title,
+.md-typeset .example > summary,
+.md-typeset .note > summary {
+	background-color: rgba(232, 32, 99, 0.4);
+	border-color: rgb(232, 32, 99);
+}
+
+.md-typeset .example > .admonition-title::before,
+.md-typeset .example > summary::before {
+	background-color: rgb(232, 32, 99);
+	-webkit-mask-image: var(--md-admonition-icon--example);
+	mask-image: var(--md-admonition-icon--example);
+}
+
+.md-typeset .note > .admonition-title::before,
+.md-typeset .note > summary::before {
+	background-color: rgb(232, 32, 99);
+	-webkit-mask-image: var(--md-admonition-icon--note);
+	mask-image: var(--md-admonition-icon--note);
+}

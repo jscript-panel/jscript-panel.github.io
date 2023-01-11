@@ -1,0 +1,2100 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../styling-ranges-text/">
+      
+      
+        <link rel="next" href="3-2-0/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
+    
+    
+      
+        <title>All - JScript Panel 3</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b71719e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#for-foobar2000-20" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="JScript Panel 3" class="md-header__button md-logo" aria-label="JScript Panel 3" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87l-1.38.83m5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JScript Panel 3
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              All
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Docs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../gallery/" class="md-tabs__link">
+        Gallery
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://marc2k3.github.io" class="md-tabs__link">
+      Other components
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JScript Panel 3" class="md-nav__button md-logo" aria-label="JScript Panel 3" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3m4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87l-1.38.83m5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8Z"/></svg>
+
+    </a>
+    JScript Panel 3
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Requirements & Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration-window/" class="md-nav__link">
+        Configuration Window
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips/" class="md-nav__link">
+        Tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocessors/" class="md-nav__link">
+        Preprocessors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flags/" class="md-nav__link">
+        Flags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../callbacks/" class="md-nav__link">
+        Callbacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonts/" class="md-nav__link">
+        Fonts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styling-ranges-text/" class="md-nav__link">
+        Styling Ranges Of Text
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_9" tabindex="0" aria-expanded="true">
+          Changes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Changes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Changes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          All
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        All
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#for-foobar2000-20" class="md-nav__link">
+    For foobar2000 2.0
+  </a>
+  
+    <nav class="md-nav" aria-label="For foobar2000 2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    3.2.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320" class="md-nav__link">
+    3.2.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3118" class="md-nav__link">
+    3.1.18
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3117" class="md-nav__link">
+    3.1.17
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3116" class="md-nav__link">
+    3.1.16
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3115" class="md-nav__link">
+    3.1.15
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3114" class="md-nav__link">
+    3.1.14
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3113" class="md-nav__link">
+    3.1.13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3112" class="md-nav__link">
+    3.1.12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3111" class="md-nav__link">
+    3.1.11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3110" class="md-nav__link">
+    3.1.10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319" class="md-nav__link">
+    3.1.9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318" class="md-nav__link">
+    3.1.8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317" class="md-nav__link">
+    3.1.7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316" class="md-nav__link">
+    3.1.6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315" class="md-nav__link">
+    3.1.5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314" class="md-nav__link">
+    3.1.4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    3.1.3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    3.1.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    3.1.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-foobar2000-166-1614" class="md-nav__link">
+    For foobar2000 1.6.6 - 1.6.14
+  </a>
+  
+    <nav class="md-nav" aria-label="For foobar2000 1.6.6 - 1.6.14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3016" class="md-nav__link">
+    3.0.16
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3015" class="md-nav__link">
+    3.0.15
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3014" class="md-nav__link">
+    3.0.14
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3013" class="md-nav__link">
+    3.0.13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3012" class="md-nav__link">
+    3.0.12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3011" class="md-nav__link">
+    3.0.11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3010" class="md-nav__link">
+    3.0.10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#309" class="md-nav__link">
+    3.0.9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#308" class="md-nav__link">
+    3.0.8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#307" class="md-nav__link">
+    3.0.7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#306" class="md-nav__link">
+    3.0.6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#305" class="md-nav__link">
+    3.0.5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#304" class="md-nav__link">
+    3.0.4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#303" class="md-nav__link">
+    3.0.3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#302" class="md-nav__link">
+    3.0.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#301" class="md-nav__link">
+    3.0.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#300" class="md-nav__link">
+    3.0.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3-2-0/" class="md-nav__link">
+        3.2.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3-1-0/" class="md-nav__link">
+        3.1.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3-0-0/" class="md-nav__link">
+        3.0.0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_10" tabindex="0" aria-expanded="false">
+          Interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interfaces" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          Interfaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IContextMenuManager/" class="md-nav__link">
+        IContextMenuManager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IDropAction/" class="md-nav__link">
+        IDropAction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IFileInfo/" class="md-nav__link">
+        IFileInfo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IJSGraphics/" class="md-nav__link">
+        IJSGraphics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IJSImage/" class="md-nav__link">
+        IJSImage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IMainMenuManager/" class="md-nav__link">
+        IMainMenuManager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IMenuObj/" class="md-nav__link">
+        IMenuObj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IMetadbHandle/" class="md-nav__link">
+        IMetadbHandle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IMetadbHandleList/" class="md-nav__link">
+        IMetadbHandleList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IPlayingItemLocation/" class="md-nav__link">
+        IPlayingItemLocation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IProfiler/" class="md-nav__link">
+        IProfiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/ISelectionHolder/" class="md-nav__link">
+        ISelectionHolder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/ITextLayout/" class="md-nav__link">
+        ITextLayout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/IThemeManager/" class="md-nav__link">
+        IThemeManager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/ITitleFormat/" class="md-nav__link">
+        ITitleFormat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/ITooltip/" class="md-nav__link">
+        ITooltip
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_11" tabindex="0" aria-expanded="false">
+          Namespaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Namespaces" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Namespaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/console/" class="md-nav__link">
+        console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/fb/" class="md-nav__link">
+        fb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/plman/" class="md-nav__link">
+        plman
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/utils/" class="md-nav__link">
+        utils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/window/" class="md-nav__link">
+        window
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Gallery
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Gallery" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Gallery
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/jsplaylist/" class="md-nav__link">
+        JS Playlist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/smooth-browser/" class="md-nav__link">
+        Smooth Browser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/smooth-playlist/" class="md-nav__link">
+        Smooth Playlist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/smooth-playlist-manager/" class="md-nav__link">
+        Smooth Playlist Manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/album-art/" class="md-nav__link">
+        Album Art
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/allmusic/" class="md-nav__link">
+        Allmusic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/lastfm-bio/" class="md-nav__link">
+        Last.fm Bio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/lastfm-info/" class="md-nav__link">
+        Last.fm Info
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/musicbrainz/" class="md-nav__link">
+        MusicBrainz
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/properties-other-info/" class="md-nav__link">
+        Properties + Other Info
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/spectrogram-seekbar/" class="md-nav__link">
+        Spectrogram Seekbar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/text-display/" class="md-nav__link">
+        Text Display
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/text-reader/" class="md-nav__link">
+        Text Reader
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/thumbs/" class="md-nav__link">
+        Thumbs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/track-info-seekbar-buttons/" class="md-nav__link">
+        Track Info + Seekbar + Buttons
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://marc2k3.github.io" class="md-nav__link">
+        Other components
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#for-foobar2000-20" class="md-nav__link">
+    For foobar2000 2.0
+  </a>
+  
+    <nav class="md-nav" aria-label="For foobar2000 2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    3.2.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320" class="md-nav__link">
+    3.2.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3118" class="md-nav__link">
+    3.1.18
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3117" class="md-nav__link">
+    3.1.17
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3116" class="md-nav__link">
+    3.1.16
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3115" class="md-nav__link">
+    3.1.15
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3114" class="md-nav__link">
+    3.1.14
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3113" class="md-nav__link">
+    3.1.13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3112" class="md-nav__link">
+    3.1.12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3111" class="md-nav__link">
+    3.1.11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3110" class="md-nav__link">
+    3.1.10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319" class="md-nav__link">
+    3.1.9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318" class="md-nav__link">
+    3.1.8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317" class="md-nav__link">
+    3.1.7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316" class="md-nav__link">
+    3.1.6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315" class="md-nav__link">
+    3.1.5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314" class="md-nav__link">
+    3.1.4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    3.1.3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    3.1.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    3.1.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-foobar2000-166-1614" class="md-nav__link">
+    For foobar2000 1.6.6 - 1.6.14
+  </a>
+  
+    <nav class="md-nav" aria-label="For foobar2000 1.6.6 - 1.6.14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3016" class="md-nav__link">
+    3.0.16
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3015" class="md-nav__link">
+    3.0.15
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3014" class="md-nav__link">
+    3.0.14
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3013" class="md-nav__link">
+    3.0.13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3012" class="md-nav__link">
+    3.0.12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3011" class="md-nav__link">
+    3.0.11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3010" class="md-nav__link">
+    3.0.10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#309" class="md-nav__link">
+    3.0.9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#308" class="md-nav__link">
+    3.0.8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#307" class="md-nav__link">
+    3.0.7
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#306" class="md-nav__link">
+    3.0.6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#305" class="md-nav__link">
+    3.0.5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#304" class="md-nav__link">
+    3.0.4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#303" class="md-nav__link">
+    3.0.3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#302" class="md-nav__link">
+    3.0.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#301" class="md-nav__link">
+    3.0.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#300" class="md-nav__link">
+    3.0.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>All</h1>
+
+<div class="admonition note">
+<p class="admonition-title">Note for JScript Panel v2 users</p>
+<p>Because of the massive changes, this component is named
+<code>JScript Panel 3 (foo_jscript_panel3.dll)</code>.</p>
+<p>For <code>x86</code> users, it will not override any previous
+<code>JScript Panel</code> installation. It will install side by
+side.</p>
+<p>There is no way to upgrade and scripts will require significant
+changes to be compatible. If you have complex scripts of your
+own, it probably isn't worth the effort.</p>
+<p>The biggest change is the reworking of all graphics and image
+handling which are detailed <a href="3-0-0/">here</a>.</p>
+<p><code>JScript Panel v2</code> is still available for download <a href="https://github.com/marc2k3/fb2k-archive/releases">here</a>.</p>
+</div>
+<h2 id="for-foobar2000-20">For <code>foobar2000</code> <code>2.0</code><a class="headerlink" href="#for-foobar2000-20" title="Permanent link">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While <code>foobar2000</code> <code>2.0</code> is <code>Beta</code>, it's strongly recommended that you use the latest version. <code>Beta 18</code> is already required for some component features.</p>
+</div>
+<h3 id="322">3.2.2<a class="headerlink" href="#322" title="Permanent link">#</a></h3>
+<ul>
+<li>Update <code>window.GetFontCUI</code> / <code>window.GetFontDUI</code> so they properly handle font names which contain properties like <code>SemiBold</code>, <code>Condensed</code>, <code>Light</code> etc.</li>
+<li>Fix bug with <code>plman.AddLocations</code> so items are added to the correct playlist if other playlist operations during the async process cause the <code>playlistIndex</code> of the destination playlist to change.</li>
+<li>Various sample fixes.</li>
+</ul>
+<h3 id="321">3.2.1<a class="headerlink" href="#321" title="Permanent link">#</a></h3>
+<ul>
+<li>The <code>Thumbs</code> sample has been limited to loading no more than 64MB of images from disk.</li>
+</ul>
+<h3 id="320">3.2.0<a class="headerlink" href="#320" title="Permanent link">#</a></h3>
+<ul>
+<li>See this <a href="3-2-0/">page</a>.</li>
+</ul>
+<h3 id="3118">3.1.18<a class="headerlink" href="#3118" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix regression from <code>3.1.17</code> where resources may not have been freed correctly on shut down. This would only affect scripts that used <code>utils.LoadSVG</code>.</li>
+</ul>
+<h3 id="3117">3.1.17<a class="headerlink" href="#3117" title="Permanent link">#</a></h3>
+<ul>
+<li>The <code>SVG</code> renderer now supports <code>text</code>.</li>
+</ul>
+<h3 id="3116">3.1.16<a class="headerlink" href="#3116" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix <code>JS Playlist</code> bug which prevented setting a custom group header height.</li>
+<li>Other minor bug fixes.</li>
+</ul>
+<h3 id="3115">3.1.15<a class="headerlink" href="#3115" title="Permanent link">#</a></h3>
+<ul>
+<li>Update <code>utils.LoadSVG</code> to use a better rendering library.</li>
+</ul>
+<h3 id="3114">3.1.14<a class="headerlink" href="#3114" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix bugs with <code>IJSGraphics</code> <code>FillGradientRectangle</code> / <code>FillGradientRectangleAdvanced</code>.</li>
+<li><code>on_library_items_changed</code> has a new <code>fromhook</code> argument. Will be <code>true</code> if changes comes from <code>Playback Statistics</code> or other components that utilise the same DB functionality. Requires <a href="https://foobar2000.org">foobar2000</a> <code>2.0 Beta 13</code> or later.</li>
+</ul>
+<h3 id="3113">3.1.13<a class="headerlink" href="#3113" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix <code>Thumbs</code> sample so existing images are not downloaded again.</li>
+</ul>
+<h3 id="3112">3.1.12<a class="headerlink" href="#3112" title="Permanent link">#</a></h3>
+<ul>
+<li>This is just a maintenance release with some bug fixes.</li>
+</ul>
+<h3 id="3111">3.1.11<a class="headerlink" href="#3111" title="Permanent link">#</a></h3>
+<ul>
+<li>The <code>Text Display</code> sample has been updated with simple scroll support. Existing users must re-import the script using the <code>Samples</code> button in the <a href="../configuration-window/">Configuration Window</a>.</li>
+<li>Add <a href="../namespaces/utils/#utilscreatetextlayout2text-fonts-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity">utils.CreateTextLayout2</a>. This allows the scrolling of styled text.</li>
+<li>Update <a href="../namespaces/utils/#utilscreatetextlayouttext-font_name-font_size-font_weight-font_style-font_stretch-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity">utils.CreateTextLayout</a> with <code>trimming_granularity</code> argument.</li>
+</ul>
+<h3 id="3110">3.1.10<a class="headerlink" href="#3110" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix <code>Text Display</code> bug where the <code>$font</code> parsing code was broken if <code>$rgb</code> code was not also present.</li>
+</ul>
+<h3 id="319">3.1.9<a class="headerlink" href="#319" title="Permanent link">#</a></h3>
+<ul>
+<li>The <code>Text Display</code> sample has been updated to support custom <code>$font</code> title formatting. See <a href="../../gallery/text-display/#title-formatting">this</a> page for full details.</li>
+</ul>
+<h3 id="318">3.1.8<a class="headerlink" href="#318" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix <code>utils.ReplaceIllegalChars</code> regression in <code>3.1.7</code>.</li>
+</ul>
+<h3 id="317">3.1.7<a class="headerlink" href="#317" title="Permanent link">#</a></h3>
+<ul>
+<li>If you use <code>Columns UI</code>, the component now requires the latest <a href="https://foobar2000.org/components/view/foo_ui_columns">2.0.0-alpha.5</a>.
+Dialogs now respect the <code>Columns UI</code> <code>Dark Mode</code> settings and the <code>on_colours_changed</code> / <code>on_font_changed</code> callbacks also require it to function properly.</li>
+<li><a href="../namespaces/fb/#fbgetlibraryitemsquery">fb.GetLibraryItems</a> now accepts an optional <code>query</code> argument which utilises new <a href="https://foobar2000.org">foobar2000</a> <code>2.0</code> code. Unlike
+<code>IMetadbHandleList GetQueryItems</code>, no errors are thrown and all items will be returned if the <code>query</code> is invalid.</li>
+<li>Various sample fixes.</li>
+</ul>
+<h3 id="316">3.1.6<a class="headerlink" href="#316" title="Permanent link">#</a></h3>
+<ul>
+<li><code>plman.IsPlaylistLocked</code> and <code>plman.IsAutoPlaylist</code> have been updated so the supplied <code>playlistIndex</code> no longer has to
+be valid. This should fix <code>JS Playlist</code> and <code>Smooth Playlist Manager</code> from occasionally throwing errors when playlists are removed.</li>
+</ul>
+<h3 id="315">3.1.5<a class="headerlink" href="#315" title="Permanent link">#</a></h3>
+<ul>
+<li>Changing the <a href="../configuration-window/#editor-properties">Editor Properties</a> is now done via a new <code>Style</code>
+button in the <a href="../configuration-window/">Configuration Window</a>.</li>
+</ul>
+<h3 id="314">3.1.4<a class="headerlink" href="#314" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix issue where <code>WebP</code> album art wasn't handled internally.</li>
+</ul>
+<h3 id="313">3.1.3<a class="headerlink" href="#313" title="Permanent link">#</a></h3>
+<ul>
+<li>Support for <code>WebP</code> images is now built in to the component. Using the <code>Windows Imaging Component (WIC)</code>
+was not reliable and may have caused display issues in recent changes to the <code>Spectrogram Seekbar</code> scripts.</li>
+</ul>
+<h3 id="312">3.1.2<a class="headerlink" href="#312" title="Permanent link">#</a></h3>
+<ul>
+<li>Update <a href="../../gallery/text-display/">Text Display</a> with album art background option. Existing users must re-import from the <code>Samples</code> button.</li>
+</ul>
+<h3 id="311">3.1.1<a class="headerlink" href="#311" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="../callbacks/#on_metadb_changedhandle_list-fromhook">on_metadb_changed</a> has had the <code>fromhook</code> argument restored.</li>
+<li>Hopefully prevent <code>Smooth Browser</code> from updating itself when plays are recorded by <code>Playback Statistics</code>.</li>
+</ul>
+<h3 id="310">3.1.0<a class="headerlink" href="#310" title="Permanent link">#</a></h3>
+<p>See this <a href="3-1-0/">page</a>.</p>
+<h2 id="for-foobar2000-166-1614">For <code>foobar2000</code> <code>1.6.6</code> - <code>1.6.14</code><a class="headerlink" href="#for-foobar2000-166-1614" title="Permanent link">#</a></h2>
+<h3 id="3016">3.0.16<a class="headerlink" href="#3016" title="Permanent link">#</a></h3>
+<ul>
+<li>Restore the <code>on_main_menu</code> callback.</li>
+<li>Restore the <code>fromhook</code> argument to <code>on_metadb_changed</code>.</li>
+</ul>
+<h3 id="3015">3.0.15<a class="headerlink" href="#3015" title="Permanent link">#</a></h3>
+<ul>
+<li>Update <code>window.GetFontCUI</code> / <code>window.GetFontDUI</code> so they properly handle font names which contain properties like <code>SemiBold</code>, <code>Condensed</code>, <code>Light</code> etc.</li>
+<li>Fix bug with <code>plman.AddLocations</code> so items are added to the correct playlist if other playlist operations during the async process cause the <code>playlistIndex</code> of the destination playlist to change.</li>
+<li>Various sample fixes.</li>
+</ul>
+<h3 id="3014">3.0.14<a class="headerlink" href="#3014" title="Permanent link">#</a></h3>
+<ul>
+<li>The <code>Thumbs</code> sample has been limited to loading no more than 64MB of images from disk.</li>
+</ul>
+<h3 id="3013">3.0.13<a class="headerlink" href="#3013" title="Permanent link">#</a></h3>
+<ul>
+<li>Backport some fixes from the latest version.</li>
+</ul>
+<h3 id="3012">3.0.12<a class="headerlink" href="#3012" title="Permanent link">#</a></h3>
+<ul>
+<li>Various bug fixes.</li>
+</ul>
+<h3 id="3011">3.0.11<a class="headerlink" href="#3011" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix regression from <code>3.0.10</code> where resources may not have been freed correctly on shut down. This would only affect scripts that used <code>utils.LoadSVG</code>.</li>
+</ul>
+<h3 id="3010">3.0.10<a class="headerlink" href="#3010" title="Permanent link">#</a></h3>
+<ul>
+<li>The <code>SVG</code> renderer now supports <code>text</code>.</li>
+</ul>
+<h3 id="309">3.0.9<a class="headerlink" href="#309" title="Permanent link">#</a></h3>
+<ul>
+<li>Update <code>utils.LoadSVG</code> to use a better rendering library.</li>
+</ul>
+<h3 id="308">3.0.8<a class="headerlink" href="#308" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix bugs with <code>IJSGraphics</code> <code>FillGradientRectangle</code> / <code>FillGradientRectangleAdvanced</code>.</li>
+</ul>
+<h3 id="307">3.0.7<a class="headerlink" href="#307" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix <code>Thumbs</code> sample so existing images are not downloaded again.</li>
+</ul>
+<h3 id="306">3.0.6<a class="headerlink" href="#306" title="Permanent link">#</a></h3>
+<ul>
+<li>Built in support for <code>WebP</code> images was backported from version <code>3.1.3</code>.</li>
+</ul>
+<h3 id="305">3.0.5<a class="headerlink" href="#305" title="Permanent link">#</a></h3>
+<ul>
+<li>Restore <a href="../configuration-window/">Configuration Window</a> menu and editor presets that were unintentionally replaced in <code>3.0.4</code>.</li>
+<li><code>Smooth Playlist Manager</code> and <code>JS Playlist</code> bug fixes.</li>
+</ul>
+<h3 id="304">3.0.4<a class="headerlink" href="#304" title="Permanent link">#</a></h3>
+<ul>
+<li>The minimum requirement for <a href="https://foobar2000.org">foobar2000</a> is now <code>1.6.6</code>.</li>
+<li>The <a href="../interfaces/IMetadbHandle/">IMetadbHandle</a> interface now has a <code>LastModified</code> property. Unlike <code>%last_modified%</code>, this is a timestamp.</li>
+<li>Fixes broken <code>$rgb</code> support in <code>JS Playlist</code>. It should be usable in columns again.</li>
+<li>Fixes a bug with <code>Last.fm Bio</code> and <code>Thumbs</code> not being able to download and save files if the artist ended with a period character.</li>
+<li>The <code>Spectrogram</code> seekbar scripts have been updated to save as <code>WebP</code> which are much smaller images.</li>
+<li>The <code>Last.fm Artist Info + User Info (previously Similar Artists)</code> can now display <code>Top tracks</code> and <code>Top tags</code>. Also, a bug which prevented <code>Recent Tracks</code> from updating has been fixed but the script needs reloading from the <code>Samples</code> button.</li>
+</ul>
+<h3 id="303">3.0.3<a class="headerlink" href="#303" title="Permanent link">#</a></h3>
+<ul>
+<li>Fixes a bug with <code>JS Playlist</code> <code>state</code> and <code>mood</code> column alignment where the <code>right</code> and <code>centre</code> options were inverted.</li>
+</ul>
+<h3 id="302">3.0.2<a class="headerlink" href="#302" title="Permanent link">#</a></h3>
+<ul>
+<li>Fix crash if <a href="../configuration-window/">Configuration Window</a> <code>Goto</code> dialog was empty when clicking <code>OK</code>.</li>
+</ul>
+<h3 id="301">3.0.1<a class="headerlink" href="#301" title="Permanent link">#</a></h3>
+<ul>
+<li>Calling <a href="../interfaces/IJSGraphics/#drawimageimage-dstx-dsty-dstw-dsth-srcx-srcy-srcw-srch-opacity-angle">DrawImage</a> with bad <code>srcW</code> or <code>srcH</code> arguments now silently fails instead of turning the whole panel black.</li>
+</ul>
+<h3 id="300">3.0.0<a class="headerlink" href="#300" title="Permanent link">#</a></h3>
+<p>See this <a href="3-0-0/">page</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022-2023 marc2003
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/marc2k3" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      
+    
+  </body>
+</html>
