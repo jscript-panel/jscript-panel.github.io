@@ -1,7 +1,7 @@
 ## Minimum requirements & download
 |Download|Release Date|Windows|foobar2000||
 |:---|:---|:----|:---|:---|
-|[:material-download: 3.4.16](https://github.com/jscript-panel/release/releases/latest)|10th March 2024|Windows 8.1+|1.6.6+|32bit/64bit
+|[:material-download: 3.4.17](https://github.com/jscript-panel/release/releases/latest)|14th March 2024|Windows 8.1+|1.6.6+|32bit/64bit
 
 !!! note
 	The last version compatible with `Windows 7/8` is available [here](https://github.com/jscript-panel/release/releases/tag/legacy).
