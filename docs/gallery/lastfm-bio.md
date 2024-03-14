@@ -1,7 +1,3 @@
-!!! note
-	Component version `3.3.21` or later is required for the functionality
-	shown in these screenshots.
-
 === "Last.fm Bio"
 	![lastfm bio](../images/lastfm-bio.png)
 

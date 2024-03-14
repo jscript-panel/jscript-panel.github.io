@@ -1,7 +1,3 @@
-!!! note
-	Component version `3.3.20` or later is required for the functionality
-	shown in these screenshots.
-
 === "Allmusic"
 	![allmusic](../images/allmusic.png)
 
