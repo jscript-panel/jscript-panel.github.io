@@ -5,6 +5,8 @@ hide: navigation
 !!! note
 	All of these have been abandoned and are unsupported. `Playcount 2003` has its own site [here](https://marc2k3.github.io/foo_playcount_2003/).
 
+	Since the `OptimFROG Decoder` code was never mine and I only made minimal changes, the source code and downloads are available [here](https://github.com/marc2k3/foo_input_ofr).
+
 ||||
 |:---|:---|:---|
 |[Cover Utils](cover-utils.md)|1.0|3rd March 2024|
