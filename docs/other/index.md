@@ -3,15 +3,16 @@ hide: navigation
 ---
 
 !!! note
-	All of these have been abandoned and are unsupported. `Playcount 2003` has its own site [here](https://marc2k3.github.io/foo_playcount_2003/).
+	All of these have been abandoned and are unsupported.
 
-	Since the `OptimFROG Decoder` code was never mine and I only made minimal changes, the source code and downloads are available [here](https://github.com/marc2k3/foo_input_ofr).
+	`Playcount 2003` has its own site [here](https://marc2k3.github.io/foo_playcount_2003/).
 
 ||||
 |:---|:---|:---|
 |[Cover Utils](cover-utils.md)|1.0|3rd March 2024|
 |[Last.fm Playcount Sync](lastfm-playcount-sync.md)|2.1.1|5th October 2023|
 |[MusicBrainz64](musicbrainz64.md)|2.1|22nd March 2024|
+|[OptimFROG Decoder](https://github.com/marc2k3/foo_input_ofr/releases)|1.44|14th March 2024|
 |[Play Track](play-track.md)|1.0.3|27th February 2023|
 |[Playlist Fix](playlist-fix.md)|1.1.5|30th December 2022|
 |[QSearch](qsearch.md)|1.0.6|14th May 2023|
