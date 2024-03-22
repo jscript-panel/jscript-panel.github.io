@@ -89,6 +89,9 @@ The main exception to the above is that `ARTISTSORT` and `ALBUMARTISTSORT` will 
 on format. See the changelog entry for [1.1.2](#112).
 
 ## Changes
+### 2.1
+- Add support for `32bit`. The name is remaining unchanged.
+- For existing `64bit` users, all preferences have been reset due to a large internal rewrite at the same time. 
 
 ### 1.2.9
 - Fix bug where ascii punctuation replacements were not applied if enabled in the `Preferences`. I can only apologise
