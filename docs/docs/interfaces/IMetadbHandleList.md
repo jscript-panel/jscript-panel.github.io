@@ -49,8 +49,8 @@ No return value.
 
 Any errors such as invalid path, corrupt image,
 target file type not supporting embedded art, etc
-should all silently fail. Any existing artwork of
-the specified type will be overwritten. There is
+should all silently fail. Any existing artwork with
+the specified `art_id` will be overwritten. There is
 no need to remove it first.
 
 !!! example
@@ -62,6 +62,20 @@ no need to remove it first.
 	}
 	handle_list.Dispose();
 	```
+
+## `AttachImage2(image[, art_id, type])`
+:octicons-tag-24: 3.4.18
+
+|Arguments|||
+|---|---|---|
+|image|[IJSImage](IJSImage.md)|
+|art_id|[AlbumArtId](../flags.md#albumartid)|Default `0`.|
+|type|`number`|Default `0` is `JPG`. Use `1` for `WebP`.|
+
+No return value.
+
+Any existing artwork with the specified `art_id` will be
+overwritten. There is no need to remove it first.
 
 ## `CalcTotalDuration()`
 Returns total in seconds.
