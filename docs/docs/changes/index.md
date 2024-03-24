@@ -1,3 +1,7 @@
+## 3.4.18
+- Add [IMetadbHandleList AttachImage2](../interfaces/IMetadbHandleList.md#attachimage2image-art_id-type). This method allows attaching images from memory rather than file path.
+- Update `Smooth Browser` group settings so the full `%date%` is displayed in `Album` mode.
+
 ## 3.4.17
 - Add new `Menu + Playback Buttons + Custom Colours` sample. This is mainly for `Columns UI` because you cannot hide the menu toolbar in `Default UI`.
 - Various `Status Bar` fixes and improvements. Existing users will need to re-import using the `Samples` button. Title formatting can now be configured via the right click menu and `$rgb` is supported.
