@@ -6,7 +6,7 @@
 Called when `Always On Top` state is changed.
 
 ## `on_colours_changed()`
-Called when colours are changed via Default UI/Columns UI preferences.
+Called when colours are changed via `Default UI` / `Columns UI` preferences.
 
 ## `on_console_refresh`
 !!! note
@@ -25,7 +25,7 @@ Called when `Cursor follow playback` state is changed.
 Called when DSP preset changes but does not get called when presets are added or removed.
 
 ## `on_font_changed()`
-Called when fonts are changed via Default UI/Columns UI preferences.
+Called when fonts are changed via `Default UI` / `Columns UI` preferences.
 
 ## `on_item_focus_change(playlistIndex, from, to)`
 |Arguments|||

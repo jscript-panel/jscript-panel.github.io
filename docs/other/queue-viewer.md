@@ -44,7 +44,7 @@ The `Send` commands flush exisiting queue items first.
 ## Changes
 
 ### 1.0.25
-- Fix bug where fb2k keyboard shortcuts were suppressed if this panel had focus. This affected Columns UI only.
+- Fix bug where `foobar2000` keyboard shortcuts were suppressed if this panel had focus. This affected `Columns UI` only.
 
 ### 1.0.24
 - Restore alternate line shading for `Default UI` elements.
