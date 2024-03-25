@@ -90,6 +90,12 @@ on format. See the changelog entry for [1.1.2](#112).
 
 ## Changes
 
+### 2.3
+- [Work](https://musicbrainz.org/doc/Work) relationships are now parsed which adds support for writing `LYRICIST`
+and `WRITER` tags. Check the main `Preferences>Tools>MusicBrainz64` if you wish to disable this. It should also
+improve coverage for `COMPOSER`.
+- Improve `PERFOMER` handling to include more vocalists.
+
 ### 2.2
 - Fix crash on shutdown which did not provide any popup but may have left crash dumps in your profile folder.
 These should be deleted to avoid confusion in the future. Apologies for the inconvenience.
