@@ -2,7 +2,7 @@
 [Download :material-download:](https://github.com/marc2k3/marc2k3/releases/tag/2024-03-02){ .md-button }
 
 !!! note
-	This version is my personal copy and has none of the features that were added by `MordredKLB`.
+	As of version `2.1`, `32bit` is supported but the name is not changing.
 
 ### Tag Mapping
 Before you consider using this to tag your files, it's important to note that it does
