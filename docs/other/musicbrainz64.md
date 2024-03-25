@@ -39,7 +39,8 @@ count/lengths. If no matches are found, it's possible the `release` does exist o
 but no one has attached a `discid` just yet.
 
 !!! note
-	When performing a `Get tags by TOC` lookup, `PERFORMER` and `COMPOSER` are not available.
+	When performing a `Get tags by TOC` lookup, `LYRICIST`, `WRITER`, `PERFORMER` and `COMPOSER`
+	are not available.
 
 You can use the 2nd option to search for releases by `Artist` and `Album` name.
 
