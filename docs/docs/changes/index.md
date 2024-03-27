@@ -1,3 +1,6 @@
+## 3.4.19
+- `Smooth Browser` has been updated so `Albums` are now sorted in alphabetical order and tracks without `%album%` tags are shunted to the end of the list. They are grouped by `%directory%`.
+
 ## 3.4.18
 - Add [IMetadbHandleList AttachImage2](../interfaces/IMetadbHandleList.md#attachimage2image-art_id-type). This method allows attaching images from memory rather than file path.
 - Update `Smooth Browser` group settings so the full `%date%` is displayed in `Album` mode.
