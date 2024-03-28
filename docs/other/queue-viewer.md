@@ -1,5 +1,5 @@
 # Queue Viewer
-[Download :material-download:](https://github.com/marc2k3/marc2k3/releases/tag/2024-03-02){ .md-button }
+[Download :material-download:](https://github.com/marc2k3/marc2k3/releases){ .md-button }
 
 ## Overview
 This provides full playback queue management as an embedded UI element for `Default UI`

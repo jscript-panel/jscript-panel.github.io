@@ -1,5 +1,5 @@
 # MusicBrainz64
-[Download :material-download:](https://github.com/marc2k3/marc2k3/releases/tag/2024-03-02){ .md-button }
+[Download :material-download:](https://github.com/marc2k3/marc2k3/releases){ .md-button }
 
 !!! note
 	As of version `2.1`, `32bit` is supported but the name is not changing.

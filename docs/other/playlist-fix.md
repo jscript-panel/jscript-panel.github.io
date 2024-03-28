@@ -1,5 +1,5 @@
 # Playlist Fix
-[Download :material-download:](https://github.com/marc2k3/marc2k3/releases/tag/2024-03-02){ .md-button }
+[Download :material-download:](https://github.com/marc2k3/marc2k3/releases){ .md-button }
 
 ## Overview
 This aims to provide similar functionality to `foo_playlist_revive`. It uses

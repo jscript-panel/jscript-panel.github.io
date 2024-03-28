@@ -1,5 +1,5 @@
 # Cover Utils
-[Download :material-download:](https://github.com/marc2k3/marc2k3/releases/tag/2024-03-02){ .md-button }
+[Download :material-download:](https://github.com/marc2k3/marc2k3/releases){ .md-button }
 
 !!! note
 	This component requires at least `Windows 8.1+` and `foobar2000` `2.1+`.

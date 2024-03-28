@@ -1,5 +1,5 @@
 # Run Main
-[Download :material-download:](https://github.com/marc2k3/marc2k3/releases/tag/2024-03-02){ .md-button }
+[Download :material-download:](https://github.com/marc2k3/marc2k3/releases){ .md-button }
 
 ## Overview
 Unlike the built in command line handler/`foo_runcmd`, this component has

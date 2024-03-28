@@ -1,5 +1,5 @@
 # QSearch
-[Download :material-download:](https://github.com/marc2k3/marc2k3/releases/tag/2024-03-02){ .md-button }
+[Download :material-download:](https://github.com/marc2k3/marc2k3/releases){ .md-button }
 
 ## Usage
 This provides 6 context menu items to create playlists or open a search window

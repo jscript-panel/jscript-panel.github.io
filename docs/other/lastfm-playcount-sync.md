@@ -1,5 +1,5 @@
 # Last.fm Playcount Sync
-[Download :material-download:](https://github.com/marc2k3/marc2k3/releases/tag/2024-03-02){ .md-button }
+[Download :material-download:](https://github.com/marc2k3/marc2k3/releases){ .md-button }
 
 ## Overview
 This component fetches [Last.fm][] playcounts and first played/last played dates
