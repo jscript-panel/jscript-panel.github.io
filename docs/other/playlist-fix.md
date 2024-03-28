@@ -29,6 +29,10 @@ The report may look something like [this](images/playlist-fix.png).
 
 ## Changes
 
+### 1.1.6
+- Compiled with latst `foobar2000` `SDK`.
+- The minimum requirement is now `foobar2000` `2.1`.
+
 ### 1.1.5
 - Internal changes only.
 
