@@ -44,7 +44,7 @@ The `Send` commands flush exisiting queue items first.
 ## Changes
 
 ### 1.0.26
-- Compiled with latst `foobar2000` `SDK`.
+- Compiled with latest `foobar2000` `SDK`.
 - The minimum requirement is now `foobar2000` `2.1`.
 
 ### 1.0.25

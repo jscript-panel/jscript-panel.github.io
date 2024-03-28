@@ -102,7 +102,7 @@ are reported in the `Console`.
 ## Changes
 
 ### 2.1.2
-- Compiled with latst `foobar2000` `SDK`.
+- Compiled with latest `foobar2000` `SDK`.
 - The minimum requirement is now `foobar2000` `2.1`.
 
 ### 2.1.1
