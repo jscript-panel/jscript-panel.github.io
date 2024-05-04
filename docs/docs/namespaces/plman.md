@@ -158,7 +158,7 @@ is duplicated, not the properties.
 |playlistIndex|`number`|Must be valid.|
 |playlistItemIndex|`number`|Must be valid.|
 
-Returns a `boolean` value.
+No return value.
 
 Starts playback by executing the default doubleclick action unless
 overridden by a lock to do something else.
