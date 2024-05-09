@@ -1,3 +1,20 @@
+## 3.4.29
+- The following `plman` methods used to return a `boolean` value to indicate success but they have now been updated to not return any value.
+```
+plman.MovePlaylist
+plman.MovePlaylistSelection
+plman.MovePlaylistSelectionV2
+plman.RemovePlaylist
+plman.RemovePlaylists
+plman.RemovePlaylistSwitch
+plman.ReplacePlaylistItem
+plman.ShowAutoPlaylistUI
+plman.ShowPlaylistLockUI
+plman.SortByFormat
+plman.SortByFormatV2
+```
+Most already have `playlistIndex` checks in place to throw script errors if they are invalid. The correct thing to do in most instances is to check playlist lock status before attempting any action. There are functions in [helpers.txt](https://github.com/jscript-panel/component/blob/db6e45548b6e2014ac26654d006bdc31fa5224f5/helpers.txt#L316-L338) to assist with this.
+
 ## 3.4.28
 - Add `fb.VersionString` property. Provides the same string as `%_foobar2000_version%` but has `[x86]` or `[x64]` appended if using [foobar2000](https://www.foobar2000.org) `2.0` or later.
 - The `Status Bar` sample has been updated to display the above version string when playback is stopped. Existing users will need to re-import using the `Samples` button.
