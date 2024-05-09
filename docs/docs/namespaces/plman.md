@@ -442,7 +442,7 @@ Returns a `boolean` value.
 |from|`number`|Must be valid.|
 |to|`number`|Must be valid and not equal to `from`.|
 
-Returns a `boolean` value.
+No return value.
 
 ## `plman.MovePlaylistSelection(playlistIndex, delta)`
 |Arguments|||
@@ -450,7 +450,7 @@ Returns a `boolean` value.
 |playlistIndex|`number`|Must be valid.|
 |delta|`number`|
 
-Returns a `boolean` value.
+No return value.
 
 !!! note
 	Only useful when the selection is contiguous. See the improved version just below.
@@ -461,7 +461,7 @@ Returns a `boolean` value.
 |playlistIndex|`number`|Must be valid.|
 |new_pos|`number`|
 
-Returns a `boolean` value.
+No return value.
 
 Unlike `plman.MovePlaylistSelection`, this has
 full support for non-contiguous selections and
@@ -514,7 +514,7 @@ No return value.
 |---|---|---|
 |playlistIndex|`number`|Must be valid.|
 
-Returns a `boolean` value.
+No return value.
 
 !!! note
 	If removing the active playlist, no playlist
@@ -540,7 +540,7 @@ Returns a `boolean` value.
 |---|---|---|
 |playlistIndexes|`array`|
 
-Returns a `boolean` value.
+No return value.
 
 !!! example
 	```js
@@ -574,7 +574,7 @@ No return value.
 |---|---|---|
 |playlistIndex|`number`|Must be valid.|
 
-Returns a `boolean` value.
+No return value.
 
 This automatically sets another playlist as
 active if removing the active playlist.
@@ -585,7 +585,7 @@ active if removing the active playlist.
 |playlistIndex|`number`|Must be valid.|
 |name|`string`|
 
-Returns a `boolean` value.
+No return value.
 
 ## `plman.ReplacePlaylistItem(playlistIndex, playlistItemIndex, handle)`
 |Arguments|||
@@ -594,7 +594,7 @@ Returns a `boolean` value.
 |playlistItemIndex|`number`|Must be valid.|
 |handle|[IMetadbHandle](../interfaces/IMetadbHandle.md)|
 
-Returns a `boolean` value.
+No return value.
 
 ## `plman.SelectQueryItems(playlistIndex, query)`
 |Arguments|||
@@ -685,20 +685,17 @@ No return value.
 |---|---|---|
 |playlistIndex|`number`|Must be valid.|
 
-Returns a `boolean` value. It will be `false` if
-the playlist was not an `Autoplaylist`.
+No return value.
 
 ## `plman.ShowPlaylistLockUI(playlistIndex)`
 |Arguments|||
 |---|---|---|
 |playlistIndex|`number`|Must be valid.|
 
-Returns a `boolean` value. The value will
-be `false` if the playlist is an `Autoplaylist`
-or the lock is owned by another component.
-
 Shows popup window letting you toggle the
 various lock options on/off.
+
+No return value.
 
 ## `plman.SortByFormat(playlistIndex, pattern[, selected_items_only])`
 |Arguments|||
@@ -707,7 +704,7 @@ various lock options on/off.
 |pattern|`string`|Title formatting pattern to sort by. Use "" to randomise the order.
 |selected_items_only|`boolean`|Default `false`.|
 
-Returns a `boolean` value.
+No return value.
 
 ## `plman.SortByFormatV2(playlistIndex, pattern[, direction])`
 |Arguments|||
@@ -716,7 +713,7 @@ Returns a `boolean` value.
 |pattern|`string`|Title formatting pattern to sort by.
 |direction|`number`|Default `1`. Use `1` for ascending, `-1` for descending.|
 
-Returns a `boolean` value.
+No return value.
 
 ## `plman.SortPlaylistsByName([direction])`
 |Arguments|||
