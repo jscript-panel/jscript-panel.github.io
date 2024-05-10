@@ -1,6 +1,7 @@
 ## 3.4.29
 - The following `plman` methods used to return a `boolean` value to indicate success but they have now been updated to not return any value.
 ```
+plman.ExecutePlaylistDefaultAction
 plman.MovePlaylist
 plman.MovePlaylistSelection
 plman.MovePlaylistSelectionV2
