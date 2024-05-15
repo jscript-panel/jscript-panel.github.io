@@ -103,17 +103,8 @@ Use in conjunction with [on_get_album_art_done](../callbacks/component.md#on_get
 !!! note
 	This method does not retrieve stub images. See [fb.GetAlbumArtStub](../namespaces/fb.md#fbgetalbumartstubart_id).
 
-## `GetFileInfo([full_info])`
-|Arguments|||
-|---|---|---|
-|full_info|`boolean`|Default `false`. Ignored if running `foobar2000` `2.0`.|
-
+## `GetFileInfo()`
 Returns an [IFileInfo](IFileInfo.md) instance.
-
-When using `foobar2000 1.x` and `full_info` you can retrieve over-sized
-tags like `LYRICS` which are usually hidden with the period character for
-performance reasons. `full_info` is ignored on `foobar2000` `2.0` because
-it returns over-sized tags by default.
 
 ## `IsInLibrary()`
 

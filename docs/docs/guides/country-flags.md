@@ -1,7 +1,5 @@
 !!! note
-	This functionality is only available in component version `3.3.19` and later. It
-	also requires `Windows 10` or later and you must have the `Twemoji Mozilla`
-	font installed.
+	This requires that you have the [Twemoji Mozilla](https://github.com/mozilla/twemoji-colr/releases/latest) font installed.
 
 While it has always been possible to display flags with images or writing your own scripts
 to make use of emoji, this details some helper methods which have been added to make it

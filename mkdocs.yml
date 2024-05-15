@@ -86,7 +86,8 @@ nav:
       - utils: docs/namespaces/utils.md
       - window: docs/namespaces/window.md
   - Changes:
-    - 3.4.x: docs/changes/index.md
+    - 3.5.x: docs/changes/index.md
+    - 3.4.x: docs/changes/3-4-x.md
     - 3.3.x: docs/changes/3-3-x.md
     - 3.2.x: docs/changes/3-2-x.md
     - 3.1.x: docs/changes/3-1-x.md

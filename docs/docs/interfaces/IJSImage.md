@@ -15,10 +15,6 @@
 
 No return value.
 
-!!! note
-	This method requires `Windows 10` or later. If used on earlier
-	versions, a script error will be thrown.
-
 !!! example
 	```js
 	var original = utils.LoadImage(fb.ComponentPath + 'samples\\images\\1.webp');

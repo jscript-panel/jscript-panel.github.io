@@ -8,7 +8,6 @@
 |fb.FoobarPath|`string`|read|
 |fb.IsPaused|`boolean`|read|
 |fb.IsPlaying|`boolean`|read|
-|fb.IsV2|`boolean`|read|
 |fb.PlaybackFollowCursor|`boolean`|read, write|
 |fb.PlaybackLength|`number`|read|
 |fb.PlaybackTime|`number`|read, write|
