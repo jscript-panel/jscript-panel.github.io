@@ -1,3 +1,7 @@
+## 3.5.1
+- Add [fb.IsLibraryInitialised](../namespaces/fb.md#fbislibraryinitialised).
+- Add [on_library_initialised](../callbacks/foobar2000.md#on_library_initialised) callback.
+
 ## 3.5.0
 - The new minimum requirement for `foobar2000` is now `2.1`. `Windows 10` or later is also required. Previous versions are available [here](https://github.com/jscript-panel/release/releases/tag/legacy).
 - `fb.IsV2` has been removed. As it was a property, script errors will not be thrown if used but it will always be `undefined`.
