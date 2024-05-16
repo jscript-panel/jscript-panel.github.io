@@ -44,6 +44,8 @@ Called when playlist focus has changed.
 Called when at least one minute of the track has been played or the track has reached its end after at least one third of it has been played.
 
 ## `on_library_initialised()`
+:octicons-tag-24: 3.5.1
+
 Called when the `foobar2000` library is initialised on startup. Prior to `foobar2000` `2.0`, the library was always ready immediately but that is not the case now.
 
 ## `on_library_items_added(handle_list)`

@@ -329,6 +329,8 @@ Returns a [SelectionType](../flags.md#selectiontype)
 Returns a `boolean` value.
 
 ## `fb.IsLibraryInitialised()`
+:octicons-tag-24: 3.5.1
+
 Returns a `boolean` value.
 
 ## `fb.RunContextCommand(command)`
