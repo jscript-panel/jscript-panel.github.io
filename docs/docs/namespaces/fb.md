@@ -328,6 +328,9 @@ Returns a [SelectionType](../flags.md#selectiontype)
 ## `fb.IsLibraryEnabled()`
 Returns a `boolean` value.
 
+## `fb.IsLibraryInitialised()`
+Returns a `boolean` value.
+
 ## `fb.RunContextCommand(command)`
 |Arguments|||
 |---|---|---|
