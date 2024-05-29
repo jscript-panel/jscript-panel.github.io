@@ -1,3 +1,7 @@
+## 3.5.2
+- Fix issue introduced in `3.4.20` where main menu items created as keyboard shortcuts only (never displayed) were not executed by `fb.RunMainMenuCommand`.
+- Fix `Smooth Playlist Manager` bug where it didn't auto scroll to the active playlist on startup.
+
 ## 3.5.1
 - Add [fb.IsLibraryInitialised](../namespaces/fb.md#fbislibraryinitialised).
 - Add [on_library_initialised](../callbacks/foobar2000.md#on_library_initialised) callback.

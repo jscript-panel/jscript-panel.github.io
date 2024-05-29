@@ -1,7 +1,7 @@
 ## Minimum requirements & download
 |Download|Release Date|Windows|foobar2000||
 |:---|:---|:----|:---|:---|
-|[:material-download: 3.5.1](https://github.com/jscript-panel/release/releases/latest)|16th May 2024|Windows 10/11|2.1+|32bit/64bit
+|[:material-download: 3.5.2](https://github.com/jscript-panel/release/releases/latest)|29th May 2024|Windows 10/11|2.1+|32bit/64bit
 
 !!! note
 	Previous versions are available [here](https://github.com/jscript-panel/release/releases/tag/legacy).
