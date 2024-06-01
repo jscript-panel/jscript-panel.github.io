@@ -1,3 +1,6 @@
+## 3.5.3
+- Fix bug when using `window.Reload()` from inside the `on_mouse_rbtn_up` callback.
+
 ## 3.5.2
 - Fix issue introduced in `3.4.20` where main menu items created as keyboard shortcuts only (never displayed) were not executed by `fb.RunMainMenuCommand`.
 - Fix `Smooth Playlist Manager` bug where it didn't auto scroll to the active playlist on startup.
