@@ -80,7 +80,7 @@ Returns an [IJSImage](IJSImage.md) instance or `null` on failure.
 Use in conjunction with [on_get_album_art_done](../callbacks/component.md#on_get_album_art_donehandle-art_id-image).
 
 !!! note
-	The `want_stub` argument was marked as deprecated in `3.3.10` and removed in `3.4.1`. See [fb.GetAlbumArtStub](../namespaces/fb.md#fbgetalbumartstubart_id).
+	This method does not retrieve stub images. See [fb.GetAlbumArtStub](../namespaces/fb.md#fbgetalbumartstubart_id).
 
 ## `GetAlbumArtEmbedded([art_id])`
 |Arguments|||
