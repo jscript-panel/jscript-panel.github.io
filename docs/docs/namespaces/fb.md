@@ -1,21 +1,22 @@
 **Properties**
 
-|||||
-|---|---|---|---|
-|fb.AlwaysOnTop|`boolean`|read, write|
-|fb.ComponentPath|`string`|read|
-|fb.CursorFollowPlayback|`boolean`|read, write|
-|fb.FoobarPath|`string`|read|
-|fb.IsPaused|`boolean`|read|
-|fb.IsPlaying|`boolean`|read|
-|fb.PlaybackFollowCursor|`boolean`|read, write|
-|fb.PlaybackLength|`number`|read|
-|fb.PlaybackTime|`number`|read, write|
-|fb.ProfilePath|`string`|read|
-|fb.ReplaygainMode|[ReplaygainMode](../flags.md#replaygainmode)|read, write|
-|fb.StopAfterCurrent|`boolean`|read, write|
-|fb.VersionString|`string`|read|
-|fb.Volume|`number`|read, write|
+||||||
+|---|---|---|---|---|
+||fb.AlwaysOnTop|`boolean`|read, write|
+||fb.ComponentPath|`string`|read|
+||fb.CursorFollowPlayback|`boolean`|read, write|
+|:octicons-tag-24: 3.5.4|fb.CustomVolume|`number`|read|See note below.
+||fb.FoobarPath|`string`|read|
+||fb.IsPaused|`boolean`|read|
+||fb.IsPlaying|`boolean`|read|
+||fb.PlaybackFollowCursor|`boolean`|read, write|
+||fb.PlaybackLength|`number`|read|
+||fb.PlaybackTime|`number`|read, write|
+||fb.ProfilePath|`string`|read|
+||fb.ReplaygainMode|[ReplaygainMode](../flags.md#replaygainmode)|read, write|
+||fb.StopAfterCurrent|`boolean`|read, write|
+||fb.VersionString|`string`|read|
+||fb.Volume|`number`|read, write|See note below.
 
 !!! example
 	```js
@@ -23,6 +24,11 @@
 	console.log(fb.FoobarPath); // Z:\foobar2000\
 	fb.PlaybackTime = 60; // jump to the one minute mark
 	```
+
+!!! note "Custom Volume"
+	`fb.CustomVolume` can be used for displaying the volume from `UPnP` devices. It will return
+	a value of `-1` when using a normal device and that also indicates that `fb.Volume` is writable.
+	When a custom volume control is active, you can not use `fb.Volume` and must use `fb.VolumeUp()` / `fb.VolumeDown()` / `fb.VolumeMute()`.
 
 **Methods**
 
