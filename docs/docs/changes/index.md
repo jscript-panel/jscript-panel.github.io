@@ -1,3 +1,15 @@
+## 3.5.4
+- Add `fb.CustomVolume` for compatibility with `UPnP` output devices. See the note [here](../namespaces/fb.md).
+- Update `fb.Volume` to suppress errors if a `UPnP` device is active.
+- Update the following samples with `$rgb` support:
+```
+Track Info + Seekbar + Buttons + Volume
+Track Info + Seekbar + Buttons
+Track Info + Spectrogram Seekbar + Buttons
+```
+Existing users will need to re-import using the `Samples` button in the [Configuration Window](../configuration-window.md).
+- Reduce height of `utils.TextBox` (used by `Text Display`) so it works on a `1080p` display at `150%` `DPI`.
+
 ## 3.5.3
 - Fix bug when using `window.Reload()` from inside the `on_mouse_rbtn_up` callback.
 
