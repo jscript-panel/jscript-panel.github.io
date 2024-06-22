@@ -563,7 +563,7 @@ was an error opening it.
 	is `UTF8`. If you're unsure, continue to use [utils.ReadTextFile](#utilsreadtextfilepath-codepage)
 
 ## `utils.RemoveFolderRecursive(path[, option])`
-:octicons-tag-24: 3.4.0
+:octicons-tag-24: 3.5.0
 
 |Arguments|||
 |---|---|---|
