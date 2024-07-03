@@ -1,3 +1,8 @@
+## 3.5.6
+- `%fb2k_profile_path%` was previously exclusive to the [Preprocessor](../preprocessors.md) section but now it's available in all [ITitleFormat](../interfaces/ITitleFormat.md) methods. Included samples like `Thumbs` and `Text Reader` can make use of it.
+- `Thumbs` has been updated to blur the current image in the background if the `Centre` option has been selected.
+- The above change to `Thumbs` means existing users of `Last.fm Bio + Images` must update using the `Samples` button in the [Configuration Window](../configuration-window.md).
+
 ## 3.5.5
 - Update [ITitleFormat EvalPlaylistItem](../interfaces/ITitleFormat.md#evalplaylistitemplaylistindex-playlistitemindex)
 and [ITitleFormat EvalActivePlaylistItem](../interfaces/ITitleFormat.md#evalactiveplaylistitemplaylistitemindex)
