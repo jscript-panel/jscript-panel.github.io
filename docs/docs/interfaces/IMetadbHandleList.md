@@ -63,7 +63,7 @@ no need to remove it first.
 	handle_list.Dispose();
 	```
 
-## `AttachImage2(image[, art_id, type])`
+## `AttachImage2(image[, art_id, format])`
 :octicons-tag-24: 3.4.18
 
 |Arguments|||
