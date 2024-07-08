@@ -1,3 +1,7 @@
+## 3.5.7
+- Fix `Last.fm Bio + Images` script error when there are no images to display. It was a regression in `3.5.6`.
+- Update `Thumbs` sample so the brightness of the blurred background can be changed. Hold ++shift++ and scroll your mouse wheel to adjust.
+
 ## 3.5.6
 - `%fb2k_profile_path%` was previously exclusive to the [Preprocessor](../preprocessors.md) section but now it's available in all [ITitleFormat](../interfaces/ITitleFormat.md) methods. Included samples like `Thumbs` and `Text Reader` can make use of it.
 - `Thumbs` has been updated to blur the current image in the background if the `Centre` option has been selected.
