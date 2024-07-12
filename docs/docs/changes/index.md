@@ -1,3 +1,7 @@
+## 3.6.0-Beta.1
+- `gr.WriteText` and `gr.WriteTextLayout` now have full `$rgb` support built in making `DrawColouredText` provided in `helpers.txt`
+obsolete. It has been removed so if you encounter any script errors, please use the `Samples` button to re-import any affected script.
+
 ## 3.5.7
 - Fix `Last.fm Bio + Images` script error when there are no images to display. It was a regression in `3.5.6`.
 - Update `Thumbs` sample so the brightness of the blurred background can be changed. Hold ++shift++ and scroll your mouse wheel to adjust.

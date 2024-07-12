@@ -1,9 +1,10 @@
 !!! note
-	For sample users, `Text Display` handles `$rgb` and `$font` code automatically.
-	`JS Playlist` supports `$rgb` in columns only.
+	For sample users, `Text Display` handles `$font` code automatically.
+	As of component `3.6.0`, `$rgb` is supported everywhere that supports
+	custom title formatting.
 
-	Parsing the results for use in your own scripts can be done with the helper
-	methods detailed below.
+	Parsing `$font` code for use in your own scripts can be done with the helper
+	method detailed below.
 
 ### $rgb
 
@@ -38,55 +39,21 @@ You can use `$font()` with no values to reset back to default.
 
 ### Using in your own scripts.
 
-There are 2 helper methods provided in `helpers.txt`.
+!!! note
+	As of component version `3.6.0`, `DrawColouredText` provided in `helpers.txt`
+	is obsolete. `gr.WriteText` now has `$rgb` parsing built in. All included
+	samples have been updated but some may need reloading from the `Samples` button.
+
+Use `DrawStyledText` when you want to use `$font` or `$font / $rgb` combined.
 
 ```
-// supports $rgb only
-DrawColouredText(gr, text, font, default_colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
-
-// added in component version 3.3.19, supports $rgb and $font
+// added in component version 3.3.19
 DrawStyledText(gr, text, default_font, default_colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
 ```
 
-They are drop in replacements for `gr.WriteText` and accept the same arguments in the same order.
+This is a drop in replacement for `gr.WriteText` and accepts the same arguments in the same order.
 
 !!! example
-	=== "$rgb only"
-		```js
-		// ==PREPROCESSOR==
-		// @import "%fb2k_component_path%helpers.txt"
-		// ==/PREPROCESSOR==
-
-		var tfo = fb.TitleFormat("$rgb(255,0,0)%artist% $rgb(0,255,0)%title%");
-		var str = "";
-
-		refresh();
-
-		function refresh() {
-			var item = fb.GetFocusItem();
-			if (item) {
-				str = tfo.EvalWithMetadb(item);
-			} else {
-				str = "";
-			}
-		}
-
-		function on_item_focus_change() {
-			refresh();
-			window.Repaint();
-		}
-
-		function on_playlist_switch() {
-			refresh();
-			window.Repaint();
-		}
-
-		function on_paint(gr) {
-			// default_font is an empty string, defaulting to Segoe UI, 16px
-			DrawColouredText(gr, str, "", 0, 0, 0, window.Width, window.Height, 2, 2, 2);
-		}
-		```
-
 	=== "$rgb & $font"
 		```js
 		// ==PREPROCESSOR==
@@ -122,4 +89,3 @@ They are drop in replacements for `gr.WriteText` and accept the same arguments i
 			DrawStyledText(gr, str, "", 0, 0, 0, window.Width, window.Height, 2, 2, 2);
 		}
 		```
-
