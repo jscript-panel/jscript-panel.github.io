@@ -41,8 +41,9 @@ You can use `$font()` with no values to reset back to default.
 
 !!! note
 	As of component version `3.6.0`, `DrawColouredText` provided in `helpers.txt`
-	is obsolete. `gr.WriteText` now has `$rgb` parsing built in. All included
-	samples have been updated but some may need reloading from the `Samples` button.
+	is obsolete and has been removed. `gr.WriteText` now has `$rgb` parsing built
+	in. All included samples have been updated but some may need reloading
+	from the `Samples` button.
 
 Use `DrawStyledText` when you want to use `$font` or `$font / $rgb` combined.
 
