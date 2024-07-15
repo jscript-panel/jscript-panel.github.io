@@ -103,7 +103,7 @@ link for an example.
 ## `utils.CreateTextLayout(text, font_name, font_size[, font_weight, font_style, font_stretch, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])`
 |Arguments|||
 |---|---|---|
-|text|`string`|
+|text|`string`|As of component version `3.6.0`, this may contain `$rgb` and `$font` code.
 |font_name|`string`|
 |font_size|`number`|
 |font_weight|[DWRITE_FONT_WEIGHT](../flags.md#dwrite_font_weight)|Default `400`.|
@@ -166,7 +166,7 @@ you can supply a vertical offset.
 ## `utils.CreateTextLayout2(text, fonts[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])`
 |Arguments|||
 |---|---|---|
-|text|`string`|
+|text|`string`|As of component version `3.6.0`, this may contain `$rgb` code.
 |fonts|`string`|This must be a stringified array of fonts. Anything other than an array will throw a script error.
 |text_alignment|[DWRITE_TEXT_ALIGNMENT](../flags.md#dwrite_text_alignment)|Default `0`.|
 |paragraph_alignment|[DWRITE_PARAGRAPH_ALIGNMENT](../flags.md#dwrite_paragraph_alignment)|Default `0`.|
