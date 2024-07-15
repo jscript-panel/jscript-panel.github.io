@@ -1,3 +1,16 @@
+!!! note
+	If any included sample throws a script error on upgrading, always update
+	to the latest version from the `Samples` button in the [Configuration
+	Window](../configuration-window.md). Only script authors need to read below.
+
+### Upgrading to 3.6.x from previous versions
+Scripts that made use of `DrawColouredText` and `DrawStyledText` in `helpers.txt`
+will need to be updated as they have been removed.
+
+`DrawColouredText` can be replaced with the original `gr.WriteText` which now has native
+support for `$rgb`. And `DrawStyledText` can be replaced by `gr.WriteText2` which has `$font`
+and `$rgb` support built in.
+
 ### Upgrading to `3.4.x` from previous versions
 `IJSGraphics` `FillGradientRectangle` and `FillGradientRectangle` have been removed. See
 [Gradients](../guides/gradients.md) for their replacements.

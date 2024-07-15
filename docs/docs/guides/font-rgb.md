@@ -1,10 +1,9 @@
 !!! note
 	For sample users, `Text Display` handles `$font` code automatically.
-	As of component `3.6.0`, `$rgb` is supported everywhere that supports
-	custom title formatting.
 
-	Parsing `$font` code for use in your own scripts can be done with the helper
-	method detailed below.
+	As of component `3.6.0`, `$rgb` works wherever custom title
+	title formatting is supported. Also, a new `gr.WriteText2` method has been added
+	which supports `$font` and `$rgb`.
 
 ### $rgb
 
@@ -39,54 +38,4 @@ You can use `$font()` with no values to reset back to default.
 
 ### Using in your own scripts.
 
-!!! note
-	As of component version `3.6.0`, `DrawColouredText` provided in `helpers.txt`
-	is obsolete and has been removed. `gr.WriteText` now has `$rgb` parsing built
-	in. All included samples have been updated but some may need reloading
-	from the `Samples` button.
-
-Use `DrawStyledText` when you want to use `$font` or `$font / $rgb` combined.
-
-```
-// added in component version 3.3.19
-DrawStyledText(gr, text, default_font, default_colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
-```
-
-This is a drop in replacement for `gr.WriteText` and accepts the same arguments in the same order.
-
-!!! example
-	=== "$rgb & $font"
-		```js
-		// ==PREPROCESSOR==
-		// @import "%fb2k_component_path%helpers.txt"
-		// ==/PREPROCESSOR==
-
-		var tfo = fb.TitleFormat("$font(Segoe UI,24)$rgb(255,0,0)%artist%$font() $font(Segoe UI,32)$rgb(0,255,0)%title%");
-		var str = "";
-
-		refresh();
-
-		function refresh() {
-			var item = fb.GetFocusItem();
-			if (item) {
-				str = tfo.EvalWithMetadb(item);
-			} else {
-				str = "";
-			}
-		}
-
-		function on_item_focus_change() {
-			refresh();
-			window.Repaint();
-		}
-
-		function on_playlist_switch() {
-			refresh();
-			window.Repaint();
-		}
-
-		function on_paint(gr) {
-			// default_font is an empty string, defaulting to Segoe UI, 16px
-			DrawStyledText(gr, str, "", 0, 0, 0, window.Width, window.Height, 2, 2, 2);
-		}
-		```
+See the `basic` samples `$rgb` and `$rgb + $font`.
