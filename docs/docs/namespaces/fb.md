@@ -150,6 +150,16 @@ Returns an [IMetadbHandleList](../interfaces/IMetadbHandleList.md) instance.
 
 Returns an [IMainMenuManager](../interfaces/IMainMenuManager.md) instance.
 
+## `fb.EnableAdvancedLogging()`
+No return value.
+
+Only enable this if you're having problems diagnosing your own script errors. The setting persists
+until `foobar2000` is closed. To disable this advanced logging, remove this method and restart
+`foobar2000`.
+
+Console messages will point directly at the `C++` source code and this is something that you can
+ask about in the [main support thread](https://hydrogenaud.io/index.php/topic,110499.0.html).
+
 ## `fb.GetAlbumArtStub([art_id])`
 :octicons-tag-24: 3.3.10
 
