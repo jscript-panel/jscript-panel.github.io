@@ -1,6 +1,10 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.1
+- Fix possible bug passing a stringified array of colours to `gr.WriteTextLayout`.
+- Add [fb.EnableAdvancedLogging](../namespaces/fb.md/#fbenableadvancedlogging). See link for usage notes.
+
 ## 3.6.0
 - `gr.WriteText` now has full `$rgb` support built in making `DrawColouredText` provided in
 `helpers.txt` obsolete. It has been removed so if you encounter any script errors,
