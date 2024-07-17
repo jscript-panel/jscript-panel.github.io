@@ -39,9 +39,8 @@ If using the `Text Display` sample, the `$font` parsing is handled automatically
 
 !!! note
 	The use of `$font` is detailed [here](font-rgb.md). If you want to
-	utilise `$font` in your own scripts, you can use `DrawStyledText` from
-	`helpers.txt`. It also supports `$rgb` if you want to combine that
-	for other text.
+	utilise `$font` in your own scripts, you can use `gr.WriteText2`.
+	It also supports `$rgb` if you want to combine that for other text.
 
 !!! example
 	```js
@@ -80,7 +79,7 @@ If using the `Text Display` sample, the `$font` parsing is handled automatically
 
 	function on_paint(gr) {
 		// default_font is an empty string, defaulting to Segoe UI, 16px
-		DrawStyledText(gr, str, "", 0, 0, 0, window.Width, window.Height, 2, 2);
+		gr.WriteText2(str, "", 0, 0, 0, window.Width, window.Height, 2, 2);
 	}
 	```
 
