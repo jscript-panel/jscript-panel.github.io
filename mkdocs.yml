@@ -111,5 +111,5 @@ nav:
       - Text Display: gallery/text-display.md
       - Text Reader: gallery/text-reader.md
       - Thumbs: gallery/thumbs.md
-      - Track Info + Seekbar + Buttons + Volume: gallery/track-info-seekbar-buttons-volume.md
+      - Seekbars + Buttons: gallery/seekbar-button.md
   - Other projects: https://marc2k3.github.io
