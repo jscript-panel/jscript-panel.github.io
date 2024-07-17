@@ -5,7 +5,7 @@
 - `gr.WriteText` now has full `$rgb` support built in making `DrawColouredText` provided in
 `helpers.txt` obsolete. It has been removed so if you encounter any script errors,
 please use the `Samples` button to re-import any affected script.
-- A new `gr.WriteText2` method has been added. In addition to supporting `$rgb` code, this also supports
+- A new [gr.WriteText2](../interfaces/IJSGraphics.md#writetext2text-font-colour-x-y-w-h-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity) method has been added. In addition to supporting `$rgb` code, this also supports
 `$font` natively. See `Samples\basic\$font + $rgb`. Because of this, `DrawStyledText` in `helpers.txt`
 has been removed.
 - `utils.CreateTextLayout` now supports `$font` and `$rgb` code contained in the text.
