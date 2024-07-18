@@ -1,19 +1,16 @@
 ## Using `IJSGraphics WriteText`
 
+!!! note
+	As of component version `3.6.0`, `gr.WriteText`, `utils.CreateTextLayout` and `utils.CreateTextLayout2`
+	support `$rgb` code natively and you may it find it easier to use than the methods described below.
+	But these techniques can be useful when not using title formatting.
+
+	None of this is supported in `gr.WriteText2` as it has native `$rgb` and `$font` support.
+
 This first example uses [IJSGraphics WriteText](../interfaces/IJSGraphics.md#writetexttext-font-colour-x-y-w-h-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity)
 where you can apply custom fonts/colours to a single string. The limitation here is that
 scrolling text vertically is not supported so if you need that, you'll need to use
 the `utils.CreateTextLayout` / `utils.CreateTextLayout2` examples below.
-
-!!! note
-	The behaviour of `WriteText` has changed in component version `3.3.19`. The changes
-	only apply to this advanced usage. Working with a single font/colour is unchanged.
-
-	Previously, colours and fonts could be combined in a single stringified array
-	passed as the `font` argument. The `font` argument now ignores colours. The `colour`
-	variable can still be a `number` for applying a single colour to the whole
-	string or it can be an stringified array for applying multiple colours as
-	illustrated below.
 
 !!! note
 	You can load this directly from the [Configuration Window](../configuration-window.md) `Samples` button `basic/WriteTextStyles`.
@@ -28,10 +25,9 @@ the `utils.CreateTextLayout` / `utils.CreateTextLayout2` examples below.
 
 	/*
 	This sample splits a string in to whole words and then randomly
-	styles each one and updates itself twice a second. Every element
-	of the array which is used for styling must have a valid
-	start/length value. You can see how the start value is
-	incremented for each word.
+	styles each one. Every element of the array which is used for
+	styling must have a valid start/length value. You can see
+	how the start value is incremented for each word.
 	*/
 
 	var installed_fonts = utils.ListFonts().toArray();
@@ -44,11 +40,6 @@ the `utils.CreateTextLayout` / `utils.CreateTextLayout2` examples below.
 	var words = text.split(' ');
 
 	refresh();
-
-	window.SetInterval(function () {
-		refresh();
-		window.Repaint();
-	}, 500);
 
 	function refresh() {
 		var fonts = [], colours = [];
