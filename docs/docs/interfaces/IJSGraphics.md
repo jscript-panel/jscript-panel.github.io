@@ -224,8 +224,10 @@ No return value.
 	See the dedicated [Fonts](../guides/fonts.md) page for how to create/manipulate your own.
 
 !!! note
-	If you want to apply a single colour to all of the text, simply supply a `number`. If supplying a `string`,
-	it must a stringified array. See [Styling Ranges Of Text](../guides/styling-ranges-text.md).
+	If you want to apply a single colour to all of the text, simply supply a `number`.
+
+	If supplying a `string`, it must be a stringified array. See [Styling Ranges Of Text](../guides/styling-ranges-text.md). `$rgb`
+	code in the `text` always takes precedence so if an array is supplied at the same time, it will be ignored.
 
 See [Styling Ranges Of Text](../guides/styling-ranges-text.md) for more advanced usage notes.
 
@@ -235,7 +237,7 @@ See [Styling Ranges Of Text](../guides/styling-ranges-text.md) for more advanced
 |Arguments|||
 |---|---|---|
 |text|`string`|May contain `$rgb` and `$font` code.
-|font|`string`|See note below.|
+|font|`string`|See note below.
 |colour|`number`|
 |x|`number`|
 |y|`number`|
@@ -249,8 +251,12 @@ See [Styling Ranges Of Text](../guides/styling-ranges-text.md) for more advanced
 No return value.
 
 !!! note
+	Unlike the original `WriteText`, the font and colour arguments are for a single font/colour only. Arrays are not
+	supported because `$rgb` and `$font` code in the `text` are both supported. These are the defaults used whenever
+	`$rgb()` and `$font()` without arguments are used to end styling on a word/sentence.
+
 	The `font` must be in string form and this can come directly from using [window.GetFontCUI](../namespaces/window.md#windowgetfontcuitype) / [window.GetFontDUI](../namespaces/window.md#windowgetfontduitype).
-	See the dedicated [Fonts](../guides/fonts.md) page for how to create/manipulate your own. Unlike the original `WriteText`, this cannot be an array. There is no need when `$font` is supported.
+	See the dedicated [Fonts](../guides/fonts.md) page for how to create/manipulate your own.
 
 ## `WriteTextLayout(text_layout, colour, x, y, w, h, vertical_offset)`
 |Arguments|||
