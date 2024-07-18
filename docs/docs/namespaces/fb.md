@@ -151,6 +151,8 @@ Returns an [IMetadbHandleList](../interfaces/IMetadbHandleList.md) instance.
 Returns an [IMainMenuManager](../interfaces/IMainMenuManager.md) instance.
 
 ## `fb.EnableAdvancedLogging()`
+:octicons-tag-24: 3.6.1
+
 No return value.
 
 Only enable this if you're having problems diagnosing your own script errors. The setting persists
