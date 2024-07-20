@@ -7,9 +7,9 @@
 	Previous versions are available [here](https://github.com/jscript-panel/release/releases/tag/legacy).
 
 ## Required fonts
-`FontAwesome` is no longer used by any included samples. [Segoe Fluent Icons](https://download.microsoft.com/download/8/f/c/8fc7cbc3-177e-4a22-af48-2a85e1c5bffb/Segoe-Fluent-Icons.zip) is now required. `Windows 11` users will already have this installed.
+For most samples, [Segoe Fluent Icons](https://download.microsoft.com/download/8/f/c/8fc7cbc3-177e-4a22-af48-2a85e1c5bffb/Segoe-Fluent-Icons.zip) is absolutely required. `Windows 11` users will already have this installed.
 
-To display [Country Flags](./guides/country-flags.md), you should install the [Twemoji Mozilla](https://github.com/mozilla/twemoji-colr/releases/latest) font.
+To display [Country Flags](./guides/country-flags.md), you should install the [Twemoji Mozilla](https://github.com/mozilla/twemoji-colr/releases/latest) font. Other fonts may not work as expected.
 
 ## Installation
 [https://wiki.hydrogenaud.io/index.php?title=Foobar2000:How_to_install_a_component](https://wiki.hydrogenaud.io/index.php?title=Foobar2000:How_to_install_a_component)
