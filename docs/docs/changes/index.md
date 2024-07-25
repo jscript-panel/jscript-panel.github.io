@@ -3,7 +3,7 @@
 
 ## 3.6.2
 - Fix long standing bug where `Underline` and `Strikethrough` properties in a single font passed to `gr.WriteText` were ignored.
-- `Text Display` amd `Text Display + Album Art + Seekbar + Buttons` have been updated so the album art is no longer locked to the front cover.
+- `Text Display` and `Text Display + Album Art + Seekbar + Buttons` have been updated so the album art is no longer locked to the front cover.
 - Allow `Text Display + Album Art + Seekbar + Buttons` background image to be toggled via the right click menu.
 
 ## 3.6.1
