@@ -5,9 +5,6 @@ image which is cached and used as the background for the seekbar.
 
 For obvious reasons, only local files with a known length are supported.
 
-!!! note
-	As of component version `3.2.23`, cue sheets are supported.
-
 ## Setup
 You can download ffmpeg from here.
 

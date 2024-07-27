@@ -56,20 +56,6 @@
 
 The above methods have no return value.
 
-## `fb.AcquireSelectionHolder()`
-!!! note
-	This method and the `ISelectionHolder` interface were removed in `3.4.3` due to bugs
-	affecting other components. Their replacement is the 3 `ISelectionHolder` methods being moved
-	to [window](../namespaces/window.md).
-
-	[window.SetPlaylistSelectionTracking](window.md/#windowsetplaylistselectiontracking)
-
-	[window.SetPlaylistTracking](window.md/#windowsetplaylisttracking)
-
-	[window.SetSelection](window.md/#windowsetselectionhandle_list-type)
-
-	See how the included samples were updated [here](https://github.com/jscript-panel/component/commit/f4d4175d39f33da15450db8080bfd77118fa86a6).
-
 ## `fb.AddLocationsAsync(window_id, paths)`
 |Arguments|||
 |---|---|---|

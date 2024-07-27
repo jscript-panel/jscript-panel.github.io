@@ -1,8 +1,5 @@
 This was originally created by [Br3tt aka Falstaff](https://www.deviantart.com/br3tt).
 
-!!! note
-	The features described below require component version `3.4.27` or later.
-
 === "List"
 	![browser column album art](../images/smooth-browser-list.png)
 
@@ -13,8 +10,6 @@ This was originally created by [Br3tt aka Falstaff](https://www.deviantart.com/b
 	Performance may appear sluggish on first run/scrolling through new items
 	as copies of the album art are resized and cached. Subsequent loading
 	should be faster.
-
-
 
 ## Common Features
 - 2 display modes avaliable:

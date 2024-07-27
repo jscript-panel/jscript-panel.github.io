@@ -351,9 +351,6 @@ the [on_http_request_done](../callbacks/component.md#on_http_request_donetask_id
 	When making a `POST` request, you should set a `Content-Type` header. Valid
 	values could be `application/json` or `application/x-www-form-urlencoded`.
 
-	This behaviour has changed in component version `3.3.24`. A separate `content_type`
-	argument is no longer supported.
-
 See [Web Requests](../guides/web-requests.md) for examples.
 
 ## `utils.InputBox(prompt, title[, default_value, error_on_cancel])`

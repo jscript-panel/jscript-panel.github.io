@@ -19,8 +19,8 @@ $transition(string,colour1,colour2)
 ```
 
 ### $font
-As of component version `3.1.9`, a `$font` function has been added. This is not a
-common function and is exclusive to `JScript Panel 3`. It takes up to 6 values.
+
+This is not a common function and is exclusive to `JScript Panel 3`. It takes up to 6 values.
 
 `$font(name,size,weight,style,underline,strikethrough)`
 

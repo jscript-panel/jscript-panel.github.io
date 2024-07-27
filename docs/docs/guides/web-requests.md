@@ -56,8 +56,6 @@ var id = utils.HTTPRequestAsync(window.ID, GET, url, headers);
 ```
 
 ## POST requests
-!!! note
-	This applies to component version `3.3.24` and later only.
 
 Here's a simple `POST` example.
 
@@ -74,8 +72,6 @@ var id = utils.HTTPRequestAsync(window.ID, POST, url, headers, post_data);
 ```
 
 ## Handling the response
-!!! note
-	This applies to component version `3.3.24` and later only.
 
 When a web request is completed, the `on_http_request_done` callback is called.
 

@@ -1,6 +1,4 @@
 !!! note
-	This functionality is only available in component version `3.3.12` and later.
-
 	This is a topic for intermediate/advanced users with a good understanding of how `JScript Panel 3`
 	works with relation to `handles` and `handle lists` and you're familiar with
 	`callbacks`.
@@ -87,8 +85,7 @@ handles.RefreshStats();
 ```
 
 Finally there is also `IMetadbHandleList` `ClearStats()` which should be self explanatory.
-As of component version `3.3.13`, this method calls `RefreshStats()` internally so there is no
-need to call it after.
+This method calls `RefreshStats()` internally so there is no need to call it after.
 
 ## Example
 

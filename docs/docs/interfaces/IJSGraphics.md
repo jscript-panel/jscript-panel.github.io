@@ -1,7 +1,3 @@
-!!! note
-	In component version `3.4.0`, there have been breaking changes in
-	how gradients are handled. See [this page](../guides/gradients.md) for more information.
-
 **Methods**
 
 ## `Clear(colour)`
@@ -23,7 +19,7 @@ No return value.
 |radiusX|`number`|
 |radiusY|`number`|
 |line_width|`number`|
-|colour|`number`,`string`|As of `3.4.0`, this can be a solid colour or [gradient](../guides/gradients.md).|
+|colour|`number`,`string`|This can be a solid colour or [gradient](../guides/gradients.md).|
 
 No return value.
 
@@ -137,7 +133,7 @@ No return value.
 |x2|`number`|
 |y2|`number`|
 |line_width|`number`|
-|colour|`number`,`string`|As of `3.4.0`, this can be a solid colour or [gradient](../guides/gradients.md).|
+|colour|`number`,`string`|This can be a solid colour or [gradient](../guides/gradients.md).|
 
 No return value.
 
@@ -149,7 +145,7 @@ No return value.
 |w|`number`|
 |h|`number`|
 |line_width|`number`|
-|colour|`number`,`string`|As of `3.4.0`, this can be a solid colour or [gradient](../guides/gradients.md).|
+|colour|`number`,`string`|This can be a solid colour or [gradient](../guides/gradients.md).|
 
 No return value.
 
@@ -163,7 +159,7 @@ No return value.
 |radiusX|`number`|
 |radiusY|`number`|
 |line_width|`number`|
-|colour|`number`,`string`|As of `3.4.0`, this can be a solid colour or [gradient](../guides/gradients.md).|
+|colour|`number`,`string`|This can be a solid colour or [gradient](../guides/gradients.md).|
 
 No return value.
 
@@ -174,7 +170,7 @@ No return value.
 |centreY|`number`|
 |radiusX|`number`|
 |radiusY|`number`|
-|colour|`number`,`string`|As of `3.4.0`, this can be a solid colour or [gradient](../guides/gradients.md).|
+|colour|`number`,`string`|This can be a solid colour or [gradient](../guides/gradients.md).|
 
 No return value.
 
@@ -185,7 +181,7 @@ No return value.
 |y|`number`|
 |w|`number`|
 |h|`number`|
-|colour|`number`,`string`|As of `3.4.0`, this can be a solid colour or [gradient](../guides/gradients.md).|
+|colour|`number`,`string`|This can be a solid colour or [gradient](../guides/gradients.md).|
 
 No return value.
 
@@ -198,7 +194,7 @@ No return value.
 |h|`number`|
 |radiusX|`number`|
 |radiusY|`number`|
-|colour|`number`,`string`|As of `3.4.0`, this can be a solid colour or [gradient](../guides/gradients.md).|
+|colour|`number`,`string`|This can be a solid colour or [gradient](../guides/gradients.md).|
 
 No return value.
 
