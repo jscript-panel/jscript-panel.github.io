@@ -1,6 +1,10 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.3
+- Add [gr.WriteTextSimple](../interfaces/IJSGraphics.md#writetextsimpletext-font-colour-x-y-w-h-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity).
+Only a single font/colour is supported and `$rgb`/`$font` code in `text` will be ignored. Also, the `font` will not support `Underline` or `Strikethrough` properties.
+
 ## 3.6.2
 - Fix long standing bug where `Underline` and `Strikethrough` properties in a single font passed to `gr.WriteText` were ignored.
 - `Text Display` and `Text Display + Album Art + Seekbar + Buttons` have been updated so the album art is no longer locked to the front cover.

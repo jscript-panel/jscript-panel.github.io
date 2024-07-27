@@ -207,7 +207,7 @@ No return value.
 |---|---|---|
 |text|`string`|As of component version `3.6.0`, this may contain `$rgb` code.
 |font|`string`|See note below.|
-|colour|`number`, `string`|`string` is only supported in component version `3.3.19` or later. See note below.|
+|colour|`number`, `string`|
 |x|`number`|
 |y|`number`|
 |w|`number`|
@@ -221,7 +221,7 @@ No return value.
 
 !!! note
 	The `font` must be in string form and this can come directly from using [window.GetFontCUI](../namespaces/window.md#windowgetfontcuitype) / [window.GetFontDUI](../namespaces/window.md#windowgetfontduitype).
-	See the dedicated [Fonts](../guides/fonts.md) page for how to create/manipulate your own.
+	See the dedicated [Fonts](../guides/fonts.md) page for how to create/manipulate your own. Using an array of fonts for styling substrings of the text is also supported. See [Styling Ranges Of Text](../guides/styling-ranges-text.md).
 
 !!! note
 	If you want to apply a single colour to all of the text, simply supply a `number`.
@@ -229,15 +229,13 @@ No return value.
 	If supplying a `string`, it must be a stringified array. See [Styling Ranges Of Text](../guides/styling-ranges-text.md). `$rgb`
 	code in the `text` always takes precedence so if an array is supplied at the same time, it will be ignored.
 
-See [Styling Ranges Of Text](../guides/styling-ranges-text.md) for more advanced usage notes.
-
 ## `WriteText2(text, font, colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])`
 :octicons-tag-24: 3.6.0
 
 |Arguments|||
 |---|---|---|
 |text|`string`|May contain `$rgb` and `$font` code.
-|font|`string`|See note below.
+|font|`string`|Must be a single font only.
 |colour|`number`|
 |x|`number`|
 |y|`number`|
@@ -251,10 +249,6 @@ See [Styling Ranges Of Text](../guides/styling-ranges-text.md) for more advanced
 No return value.
 
 !!! note
-	Unlike the original `WriteText`, the font and colour arguments are for a single font/colour only. Arrays are not
-	supported because `$rgb` and `$font` code in the `text` are both supported. These are the defaults used whenever
-	`$rgb()` and `$font()` without arguments are used to end styling on a word/sentence.
-
 	The `font` must be in string form and this can come directly from using [window.GetFontCUI](../namespaces/window.md#windowgetfontcuitype) / [window.GetFontDUI](../namespaces/window.md#windowgetfontduitype).
 	See the dedicated [Fonts](../guides/fonts.md) page for how to create/manipulate your own.
 
@@ -262,7 +256,7 @@ No return value.
 |Arguments|||
 |---|---|---|
 |text_layout|[ITextLayout](ITextLayout.md)|
-|colour|`number`, `string`|`string` is only supported in component version `3.1.11` or later. See note below.|
+|colour|`number`, `string`|
 |x|`number`|
 |y|`number`|
 |w|`number`|
@@ -270,8 +264,32 @@ No return value.
 |vertical_offset|`number`|Default `0`.|
 
 !!! note
-	If you want to apply a single colour to all of the text, simply supply a `number`. If supplying a `string`,
-	it must a stringified array. See [Styling Ranges Of Text](../guides/styling-ranges-text.md).
+	If you want to apply a single colour to all of the text, simply supply a `number`.
+
+	If supplying a `string`, it must be a stringified array. See [Styling Ranges Of Text](../guides/styling-ranges-text.md).
 
 See [utils.CreateTextLayout](../namespaces/utils.md#utilscreatetextlayouttext-font_name-font_size-font_weight-font_style-font_stretch-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity) and
 [utils.CreateTextLayout2](../namespaces/utils.md#utilscreatetextlayout2text-fonts-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity) for examples.
+
+## `WriteTextSimple(text, font, colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])`
+:octicons-tag-24: 3.6.3
+
+|Arguments|||
+|---|---|---|
+|text|`string`|`$rgb` and `$font` code will be ignored.
+|font|`string`|Must be a single font only. Also, `Underline` and `Strikethrough` properties are not supported and will be ignored.
+|colour|`number`|
+|x|`number`|
+|y|`number`|
+|w|`number`|
+|h|`number`|
+|text_alignment|[DWRITE_TEXT_ALIGNMENT](../flags.md#dwrite_text_alignment)|Default `0`.|
+|paragraph_alignment|[DWRITE_PARAGRAPH_ALIGNMENT](../flags.md#dwrite_paragraph_alignment)|Default `0`.|
+|word_wrapping|[DWRITE_WORD_WRAPPING](../flags.md#dwrite_word_wrapping)|Default `0`.|
+|trimming_granularity|[DWRITE_TRIMMING_GRANULARITY](../flags.md#dwrite_trimming_granularity)|Default `0`.|
+
+No return value.
+
+!!! note
+	The `font` must be in string form and this can come directly from using [window.GetFontCUI](../namespaces/window.md#windowgetfontcuitype) / [window.GetFontDUI](../namespaces/window.md#windowgetfontduitype).
+	See the dedicated [Fonts](../guides/fonts.md) page for how to create/manipulate your own.
