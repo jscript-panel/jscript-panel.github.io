@@ -1,11 +1,11 @@
-## Using `IJSGraphics WriteText`
-
 !!! note
 	As of component version `3.6.0`, `gr.WriteText`, `utils.CreateTextLayout` and `utils.CreateTextLayout2`
 	support `$rgb` code natively and you may it find it easier to use than the methods described below.
 	But these techniques can be useful when not using title formatting.
 
 	None of this is supported in `gr.WriteText2` as it has native `$rgb` and `$font` support.
+
+## Using `IJSGraphics WriteText`
 
 This first example uses [IJSGraphics WriteText](../interfaces/IJSGraphics.md#writetexttext-font-colour-x-y-w-h-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity)
 where you can apply custom fonts/colours to a single string. The limitation here is that
@@ -84,6 +84,9 @@ the `utils.CreateTextLayout` / `utils.CreateTextLayout2` examples below.
 ## Using `utils.CreateTextLayout`
 Use something like this if you want scrollable text, a single font and to apply different colours.
 
+!!! note
+	You can load this directly from the [Configuration Window](../configuration-window.md) `Samples` button `basic/SimpleScroll + Coloured Text`.
+
 !!! example
 	```js
 	// ==PREPROCESSOR==
@@ -151,6 +154,9 @@ Use something like this if you want scrollable text, a single font and to apply 
 
 ## Using `utils.CreateTextLayout2`
 Use something like this if you want scrollable text, custom fonts and to apply different colours.
+
+!!! note
+	You can load this directly from the [Configuration Window](../configuration-window.md) `Samples` button `basic/SimpleScroll + Styled Text`.
 
 !!! example
 	```js

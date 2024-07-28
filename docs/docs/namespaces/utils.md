@@ -120,6 +120,9 @@ You typically use this when you want to calculate the height of a string
 that wraps over multiple lines or need scrolling. When passing to [IJSGraphics WriteTextLayout](../interfaces/IJSGraphics.md#writetextlayouttext_layout-colour-x-y-w-h-vertical_offset),
 you can supply a vertical offset.
 
+!!! note
+	You can load this directly from the [Configuration Window](../configuration-window.md) `Samples` button `basic/SimpleScroll`.
+
 !!! example
 	```js
 	// ==PREPROCESSOR==

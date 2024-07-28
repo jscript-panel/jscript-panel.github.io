@@ -203,7 +203,7 @@ No return value.
 |---|---|---|
 |text|`string`|As of component version `3.6.0`, this may contain `$rgb` code.
 |font|`string`|See note below.|
-|colour|`number`, `string`|
+|colour|`number`, `string`|See note below.|
 |x|`number`|
 |y|`number`|
 |w|`number`|
@@ -231,7 +231,7 @@ No return value.
 |Arguments|||
 |---|---|---|
 |text|`string`|May contain `$rgb` and `$font` code.
-|font|`string`|Must be a single font only.
+|font|`string`|See note below. Unlike the original `WriteText`, this must be a single font only.|
 |colour|`number`|
 |x|`number`|
 |y|`number`|
@@ -252,7 +252,7 @@ No return value.
 |Arguments|||
 |---|---|---|
 |text_layout|[ITextLayout](ITextLayout.md)|
-|colour|`number`, `string`|
+|colour|`number`, `string`|See note below.|
 |x|`number`|
 |y|`number`|
 |w|`number`|
@@ -273,7 +273,7 @@ See [utils.CreateTextLayout](../namespaces/utils.md#utilscreatetextlayouttext-fo
 |Arguments|||
 |---|---|---|
 |text|`string`|`$rgb` and `$font` code will be ignored.
-|font|`string`|Must be a single font only. Also, `Underline` and `Strikethrough` properties are not supported and will be ignored.
+|font|`string`|See note below. Must be a single font only. Also, `Underline` and `Strikethrough` properties are not supported and will be ignored.
 |colour|`number`|
 |x|`number`|
 |y|`number`|
