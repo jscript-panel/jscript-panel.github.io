@@ -4,6 +4,7 @@
 ## 3.6.3
 - Add [gr.WriteTextSimple](../interfaces/IJSGraphics.md#writetextsimpletext-font-colour-x-y-w-h-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity).
 Only a single font/colour is supported and `$rgb`/`$font` code in `text` will be ignored. Also, the `font` will not support `Underline` or `Strikethrough` properties.
+- Update [utils.CalcTextWidth](../namespaces/utils.md#utilscalctextwidthtext-font_name-font_size-font_weight-font_style-font_stretch) to handle `$font` code in the text.
 
 ## 3.6.2
 - Fix long standing bug where `Underline` and `Strikethrough` properties in a single font passed to `gr.WriteText` were ignored.
