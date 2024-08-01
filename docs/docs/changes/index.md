@@ -1,6 +1,9 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.4
+- Attempt to fix repaint glitch when using `Default UI` tabs and hardware accelerated `Default UI` visualisations.
+
 ## 3.6.3
 - Add [gr.WriteTextSimple](../interfaces/IJSGraphics.md#writetextsimpletext-font-colour-x-y-w-h-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity).
 Only a single font/colour is supported and `$rgb`/`$font` code in `text` will be ignored. Also, the `font` will not support `Underline` or `Strikethrough` properties.
