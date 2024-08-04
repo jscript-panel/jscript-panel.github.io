@@ -335,6 +335,13 @@ Returns a `VBArray` so you need to use `.toArray()` on the result.
 	var arr = utils.Glob("C:\\Pictures\\*.jpg").toArray();
 	```
 
+## `utils.HashString(str)`
+|Arguments|||
+|---|---|---|
+|str|`string`|
+
+Returns a `string`.
+
 ## `utils.HTTPRequestAsync(window_id, type, url[, user_agent_or_headers, post_data])`
 |Arguments|||
 |---|---|---|

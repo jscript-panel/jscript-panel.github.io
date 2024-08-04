@@ -1,6 +1,9 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.5
+- Add [utils.HashString](../namespaces/utils.md#utilshashstringstr).
+
 ## 3.6.4
 - Attempt to fix repaint glitch when using `Default UI` tabs and hardware accelerated `Default UI` visualisations.
 
