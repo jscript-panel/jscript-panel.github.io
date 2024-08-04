@@ -2,7 +2,14 @@
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
 ## 3.6.5
+- `Smooth Browser` has been updated to support multi-value artist tags.
+- Add [IMetadbHandleList GroupByTag](../interfaces/IMetadbHandleList/#groupbytagtag).
 - Add [utils.HashString](../namespaces/utils.md#utilshashstringstr).
+- Fix regression in `3.5.1` where `on_library_items_changed` stopped working.
+
+!!! note
+	Because of `Smooth` sample changes, the `js_smooth_cache` folder inside your `foobar2000`
+	profile is now obsolete and may be deleted. Images are now cached inside `js_data\smooth_cache`.
 
 ## 3.6.4
 - Attempt to fix repaint glitch when using `Default UI` tabs and hardware accelerated `Default UI` visualisations.
