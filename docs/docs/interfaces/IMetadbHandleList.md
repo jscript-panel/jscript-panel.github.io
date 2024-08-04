@@ -250,6 +250,31 @@ Returns an [IMetadbHandleList](IMetadbHandleList.md) instance.
 	input, you should use this inside a try/catch statement.
 	An empty handle list will be returned if the query is valid but there are no results.
 
+## `GroupByTag(tag)`
+|Arguments|||
+|---|---|---|
+|tag|`string`|
+
+Returns a `VBArray` so you need to use `.toArray()` on the result.
+
+The allows library viewers to cater for multiple value tags.
+
+!!! example
+	```js
+	var items = fb.GetLibraryItems();
+	var arr = items.GroupByTag('artist').toArray();
+
+	// note the +=2 here
+	// even elements are the tag name
+	// odd number elements are the handles for that tag
+	for (var i = 0; i < arr.length; i += 2) {
+		var artist = arr[i];
+
+		// the order of these will be random. You must sort them yourself.
+		var artist_handles = arr[i + 1];
+	}
+	```
+
 ## `InsertItem(index, handle)`
 |Arguments|||
 |---|---|---|
