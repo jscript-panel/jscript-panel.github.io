@@ -265,8 +265,8 @@ The allows library viewers to cater for multiple value tags.
 	var arr = items.GroupByTag('artist').toArray();
 
 	// note the +=2 here
-	// even elements are the tag name
-	// odd number elements are the handles for that tag
+	// even elements are the tag value
+	// odd number elements are the handles for that tag value
 	for (var i = 0; i < arr.length; i += 2) {
 		var artist = arr[i];
 
