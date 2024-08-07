@@ -32,7 +32,7 @@ This was originally created by [Br3tt aka Falstaff](https://www.deviantart.com/b
 - Double click to send to playlist and play or just send without playing. Check the right click menu for [options](../images/smooth-browser-playlist-options.png).
 - 3 group modes available:
     * Album
-    * Artist
+    * Artist (as of component version `3.6.5`, this is multi-value)
     * Album Artist
 - Filter box with full `Media Library` query support.
 - Multiple selections with the ++ctrl++ / ++shift++ keys are supported.
