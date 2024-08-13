@@ -4,7 +4,7 @@
 ## 3.6.6
 - Add [fb.GetAudioChunk](../namespaces/fb.md#fbgetaudiochunkrequested_length-offset).
 - Add [IAudioChunk](../interfaces/IAudioChunk.md) interface. This is experimental and may be subject to change.
-- Tidy up `JS Playlist` settings and fix bug where the word `null` was displayed incorrectly. Fields should now be left empty whrn you don't want anything displayed.
+- Tidy up `JS Playlist` settings and fix bug where the word `null` was displayed incorrectly. Fields should now be left empty when you don't want anything displayed.
 
 ## 3.6.5
 - `Smooth Browser` has been updated to support multi-value artist tags.
