@@ -1,3 +1,5 @@
+:octicons-tag-24: 3.6.6
+
 !!! note
 	This is experimental and subject to change. I'm providing raw data only and I have no idea how to use this.
 
