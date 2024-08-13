@@ -39,28 +39,6 @@
 	}
 	```
 
-	The source code for `fb.GetAudioChunk` is basically this:
-
-	```cpp
-	// visualisation_stream_v2::ptr
-	if (m_vis.is_valid())
-	{
-		double time{};
-		if (m_vis->get_absolute_time(time))
-		{
-			audio_chunk_impl chunk;
-			if (m_vis->get_chunk_absolute(chunk, time + offset, requested_length))
-			{
-				*out = new ComObject<AudioChunk>(chunk);
-			}
-		}
-	}
-	```
-
-	`get_absolute_time` and `get_chunk_absolute` and their arguments are described here:
-
-	[https://github.com/marc2k3/foobar2000-sdk/blob/main/foobar2000/SDK/vis.h](https://github.com/marc2k3/foobar2000-sdk/blob/main/foobar2000/SDK/vis.h)
-
 	`IAudioChunk` is a simplified wrapper around this:
 
 	[https://github.com/marc2k3/foobar2000-sdk/blob/main/foobar2000/SDK/audio_chunk.h](https://github.com/marc2k3/foobar2000-sdk/blob/main/foobar2000/SDK/audio_chunk.h)

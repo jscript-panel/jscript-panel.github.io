@@ -167,6 +167,39 @@ Returns an [IJSImage](../interfaces/IJSImage.md) instance or `null` on failure.
 
 Returns an [IAudioChunk](../interfaces/IAudioChunk.md) instance or `null` on failure.
 
+The source code is basically this:
+
+```cpp
+STDMETHODIMP Fb::GetAudioChunk(double requested_length, double offset, IAudioChunk** out)
+{
+	RETURN_HR_IF_NULL(E_POINTER, out);
+
+	// return value will be null in JavaScript if the code below fails
+	*out = nullptr;
+
+	if (m_vis.is_valid())
+	{
+		double time{};
+		if (m_vis->get_absolute_time(time))
+		{
+			audio_chunk_impl chunk;
+			if (m_vis->get_chunk_absolute(chunk, time + offset, requested_length))
+			{
+				// success, return value will be a valid audio chunk
+				*out = new ComObject<AudioChunk>(chunk);
+			}
+		}
+	}
+
+	return S_OK;
+}
+```
+
+`get_absolute_time` and `get_chunk_absolute` and their arguments are described here:
+
+[https://github.com/marc2k3/foobar2000-sdk/blob/main/foobar2000/SDK/vis.h](https://github.com/marc2k3/foobar2000-sdk/blob/main/foobar2000/SDK/vis.h)
+
+
 ## `fb.GetClipboardContents()`
 Returns an [IMetadbHandleList](../interfaces/IMetadbHandleList.md) instance.
 
