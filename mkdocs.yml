@@ -65,6 +65,7 @@ nav:
       - Windows: docs/callbacks/windows.md
       - foobar2000: docs/callbacks/foobar2000.md
     - Interfaces:
+      - IAudioChunk: docs/interfaces/IAudioChunk.md
       - IContextMenuManager: docs/interfaces/IContextMenuManager.md
       - IDropAction: docs/interfaces/IDropAction.md
       - IFileInfo: docs/interfaces/IFileInfo.md

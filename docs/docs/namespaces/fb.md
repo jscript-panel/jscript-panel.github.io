@@ -157,6 +157,16 @@ ask about in the [main support thread](https://hydrogenaud.io/index.php/topic,11
 
 Returns an [IJSImage](../interfaces/IJSImage.md) instance or `null` on failure.
 
+## `fb.GetAudioChunk(requested_length[, offset])`
+:octicons-tag-24: 3.6.6
+
+|Arguments|||
+|---|---|---|
+|requested_length|`number`|seconds|
+|offset|`number`|Default `0`|
+
+Returns an [IAudioChunk](../interfaces/IAudioChunk.md) instance or `null` on failure.
+
 ## `fb.GetClipboardContents()`
 Returns an [IMetadbHandleList](../interfaces/IMetadbHandleList.md) instance.
 

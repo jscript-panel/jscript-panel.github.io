@@ -1,9 +1,13 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.6
+- Add [fb.GetAudioChunk](../namespaces/fb.md#fbgetaudiochunkrequested_length-offset).
+- Add [IAudioChunk](../interfaces/IAudioChunk.md) interface. This is experimental and may be subject to change.
+
 ## 3.6.5
 - `Smooth Browser` has been updated to support multi-value artist tags.
-- Add [IMetadbHandleList GroupByTag](../interfaces/IMetadbHandleList/#groupbytagtag).
+- Add [IMetadbHandleList GroupByTag](../interfaces/IMetadbHandleList.md#groupbytagtag).
 - Add [utils.HashString](../namespaces/utils.md#utilshashstringstr).
 - Fix regression in `3.5.1` where `on_library_items_changed` stopped working.
 
@@ -26,7 +30,7 @@ Only a single font/colour is supported and `$rgb`/`$font` code in `text` will be
 
 ## 3.6.1
 - Fix possible bug passing a stringified array of colours to `gr.WriteTextLayout`.
-- Add [fb.EnableAdvancedLogging](../namespaces/fb.md/#fbenableadvancedlogging). See link for usage notes.
+- Add [fb.EnableAdvancedLogging](../namespaces/fb.md#fbenableadvancedlogging). See link for usage notes.
 
 ## 3.6.0
 - `gr.WriteText` now has full `$rgb` support built in making `DrawColouredText` provided in
