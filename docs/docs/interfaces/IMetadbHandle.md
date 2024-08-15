@@ -11,15 +11,15 @@ var handle = fb.GetFocusItem();
 
 **Properties**
 
-||||||
-|---|---|---|---|---|
-|Requires `foobar2000` `2.0`.|FileCreated|`number`|read|The number of seconds since 00:00:00 Thursday, 1 January 1970 UTC.|
-||FileSize|`number`|read|
-||LastModified|`number`|read|The number of seconds since 00:00:00 Thursday, 1 January 1970 UTC.|
-||Length|`number`|read|
-||Path|`string`|read|
-||RawPath|`string`|read|
-||SubSong|`number`|read|
+|||||
+|---|---|---|---|
+|FileCreated|`number`|read|The number of seconds since 00:00:00 Thursday, 1 January 1970 UTC.|
+|FileSize|`number`|read|
+|LastModified|`number`|read|The number of seconds since 00:00:00 Thursday, 1 January 1970 UTC.|
+|Length|`number`|read|
+|Path|`string`|read|
+|RawPath|`string`|read|
+|SubSong|`number`|read|
 
 !!! example
 	```js
