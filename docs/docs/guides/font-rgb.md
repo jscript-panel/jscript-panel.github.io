@@ -1,7 +1,7 @@
 !!! note
 	For sample users, `Text Display` handles `$font` code automatically.
 
-	As of component `3.6.0`, `$rgb` works wherever custom title
+	As of component version `3.6.0`, `$rgb` works wherever custom title
 	title formatting is supported. Also, a new `gr.WriteText2` method has been added
 	which supports `$font` and `$rgb`.
 
