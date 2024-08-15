@@ -1,6 +1,9 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.7
+- Add `VU Meter` sample created by [Case](https://hydrogenaud.io/index.php?action=profile;u=322).
+
 ## 3.6.6
 - Add [fb.GetAudioChunk](../namespaces/fb.md#fbgetaudiochunkrequested_length-offset).
 - Add [IAudioChunk](../interfaces/IAudioChunk.md) interface. This is experimental and may be subject to change.
