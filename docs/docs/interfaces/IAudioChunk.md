@@ -1,8 +1,5 @@
 :octicons-tag-24: 3.6.6
 
-!!! note
-	This is experimental and subject to change. I'm providing raw data only and I have no idea how to use this.
-
 **Properties**
 
 |||||
@@ -42,3 +39,5 @@
 	`IAudioChunk` is a simplified wrapper around this:
 
 	[https://github.com/marc2k3/foobar2000-sdk/blob/main/foobar2000/SDK/audio_chunk.h](https://github.com/marc2k3/foobar2000-sdk/blob/main/foobar2000/SDK/audio_chunk.h)
+
+	Component version `3.6.7` and later contain a `VU Meter` sample which shows how to use this.

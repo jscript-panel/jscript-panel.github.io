@@ -6,7 +6,7 @@
 
 ## 3.6.6
 - Add [fb.GetAudioChunk](../namespaces/fb.md#fbgetaudiochunkrequested_length-offset).
-- Add [IAudioChunk](../interfaces/IAudioChunk.md) interface. This is experimental and may be subject to change.
+- Add [IAudioChunk](../interfaces/IAudioChunk.md) interface.
 - Tidy up `JS Playlist` settings and fix bug where the word `null` was displayed incorrectly. Fields should now be left empty when you don't want anything displayed.
 
 ## 3.6.5
