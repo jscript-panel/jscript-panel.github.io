@@ -1,6 +1,11 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.8
+- `VU Meter` sample tweaks:
+    * There is now only one block style (by dB).
+    * These variables are now obsolete: `rms_block_count`, `rms_block_db`, `rms_3db`. Use the right click menu instead.
+
 ## 3.6.7
 - Add `VU Meter` sample created by [Case](https://hydrogenaud.io/index.php?action=profile;u=322).
 
