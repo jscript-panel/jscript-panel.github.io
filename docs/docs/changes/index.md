@@ -1,6 +1,9 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.9
+- Update `VU Meter` to respect `DPI` settings and add full custom colour support to the right click menu. Existing users must update using the `Samples` button in the [Configuration Window](../configuration-window.md).
+
 ## 3.6.8
 - `VU Meter` sample tweaks:
     * There is now only one block style (by dB).
