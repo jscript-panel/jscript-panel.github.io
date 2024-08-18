@@ -1,6 +1,11 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.10
+- `VU Meter` now has support for gradient bar colours set via the right click menu.
+- Fix `Thumbs` bug where the underlying background colour may have dominated blurred images.
+- Various other bug fixes.
+
 ## 3.6.9
 - Update `VU Meter` to respect `DPI` settings and add full custom colour support to the right click menu. Existing users must update using the `Samples` button in the [Configuration Window](../configuration-window.md).
 
