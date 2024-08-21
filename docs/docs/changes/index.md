@@ -2,7 +2,7 @@
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
 ## 3.6.11
-- Add [utils.CalcTextWidth2](../namespaces/utils.md#utilscalctextwidth2text-font_str) which takes a font as string.
+- Add [utils.CalcTextWidth2](../namespaces/utils.md#utilscalctextwidth2text-font_str) which takes a font as a string.
 - Add `Text Display + Album Art + Rating` sample. Supports `Playback Statistics` or writing any custom file tag you like. Right click to customise.
 - Update `VU Meter` with custom `Peak` colour option.
 
