@@ -1,6 +1,11 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.11
+- Add [utils.CalcTextWidth2](../namespaces/utils.md#utilscalctextwidth2text-font_str) which takes a font as string.
+- Add `Text Display + Album Art + Rating` sample. Supports `Playback Statistics` or writing any custom file tag you like. Right click to customise.
+- Update `VU Meter` with custom `Peak` colour option.
+
 ## 3.6.10
 - `VU Meter` now has support for gradient bar colours set via the right click menu.
 - Fix `Thumbs` bug where the underlying background colour may have dominated blurred images.
