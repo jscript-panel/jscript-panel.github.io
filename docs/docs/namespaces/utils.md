@@ -27,6 +27,21 @@ The version number corresponds with the string like these examples:
 
 Returns a `number`.
 
+## `utils.CalcTextWidth2(text, font_str)`
+|Arguments|||
+|---|---|---|
+|text|`string`|
+|font_str|`string`
+
+Returns a `number`.
+
+!!! example
+	```js
+	var text = "blah";
+	var font = window.GetFontDUI(0);
+	var width = utils.CalcTextWidth2(text, font);
+	```
+
 ## `utils.CheckFont(name)`
 |Arguments|||
 |---|---|---|
