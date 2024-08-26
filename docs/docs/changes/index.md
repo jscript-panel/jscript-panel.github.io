@@ -1,6 +1,10 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.6.14
+- `Album Art` has a new custom mode available from the right click menu. When enabled you can set multiple artwork types to be checked in order such as front first and if not found, use artist etc.
+- Various internal bug fixes.
+
 ## 3.6.11
 - Add [utils.CalcTextWidth2](../namespaces/utils.md#utilscalctextwidth2text-font_str) which takes a font as a string.
 - Add `Text Display + Album Art + Rating` sample. Supports `Playback Statistics` or writing any custom file tag you like. Right click to customise.
