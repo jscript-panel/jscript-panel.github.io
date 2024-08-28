@@ -1,6 +1,10 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.7.1
+- This update exposes all `Album Art` options in the various `Text Display` samples. And once again, they need reloading
+from the `Samples` button.
+
 ## 3.7.0
 - There has been a large rewrite of some included samples which means existing users will need to reload these from the
 `Samples` button:
