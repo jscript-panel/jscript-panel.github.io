@@ -248,7 +248,7 @@ var AlbumArtType = {
 	embedded : 0,
 	default : 1,
 	stub : 2,
-}
+};
 ```
 
 ## ColourTypeCUI

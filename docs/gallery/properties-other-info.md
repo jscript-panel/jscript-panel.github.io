@@ -11,5 +11,5 @@ are transformed in to website urls so you can click and read more.
 
 ## Other Info
 The `General` and `Location` sections should be same as from the `Properties`
-dialog. Additonal information from `Playback Statistics` and 3rd party
+dialog. Additional information from `Playback Statistics` and 3rd party
 components will be exposed if available.

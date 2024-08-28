@@ -19,7 +19,7 @@ Text Reader
 ```
 Apologies for the inconvenience.
 - Add [IMetadHandle ShowPictureViewer2](../interfaces/IMetadbHandle.md#showalbumartviewer2art_id-type).
-- With the additon of the above method, the `Album Art` sample picture viewer now works in `Custom` mode.
+- With the addition of the above method, the `Album Art` sample picture viewer now works in `Custom` mode.
 - A simplified script named `Images` has been added for displaying multiple images without thumbnails. If
 you use `Thumbs` with thumbnails turned off, it's recommended that you switch to this. It has
 no limitations on the the size/number of images in a given folder because it only loads one image in memory

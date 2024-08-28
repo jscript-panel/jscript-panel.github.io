@@ -104,6 +104,7 @@ nav:
       - Smooth Playlist Manager: gallery/smooth-playlist-manager.md
       - Album Art: gallery/album-art.md
       - Allmusic: gallery/allmusic.md
+      - Images: gallery/images.md
       - Last.fm Bio: gallery/lastfm-bio.md
       - Last.fm Info: gallery/lastfm-info.md
       - MusicBrainz: gallery/musicbrainz.md
@@ -114,4 +115,5 @@ nav:
       - Text Reader: gallery/text-reader.md
       - Thumbs: gallery/thumbs.md
       - Seekbars + Buttons: gallery/seekbar-button.md
+      - VU Meter: gallery/vu-meter.md
   - Other projects: https://marc2k3.github.io
