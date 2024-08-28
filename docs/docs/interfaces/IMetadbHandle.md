@@ -147,3 +147,13 @@ See [Playback Statistics](../guides/playback-statistics.md).
 |want_stub|`boolean`|Default `true`.|
 
 No return value.
+
+## `ShowAlbumArtViewer2(art_id, type)`
+:octicons-tag-24: 3.7.0
+
+|Arguments|||
+|---|---|---|
+|art_id|[AlbumArtId](../flags.md#albumartid)|
+|type|[AlbumArtType](../flags.md#albumarttype)||
+
+No return value.
