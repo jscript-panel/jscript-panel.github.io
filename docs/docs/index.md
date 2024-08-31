@@ -1,10 +1,17 @@
 ## Minimum requirements & download
 |Download|Release Date|Windows|foobar2000||
 |:---|:---|:----|:---|:---|
-|[:material-download: 3.7.2](https://github.com/jscript-panel/release/releases/latest)|31st August 2024|Windows 10/11|2.1+|32bit/64bit
+|[:material-download: 3.7.3](https://github.com/jscript-panel/release/releases/latest)|31st August 2024|Windows 10/11|2.1+|32bit/64bit
 
 !!! note
 	Previous versions are available [here](https://github.com/jscript-panel/release/releases/tag/legacy).
+
+!!! important
+	On the 31st August 2024, it was noticed that the Last.fm API key supplied with JScript Panel for many years
+	has been blocked for excessive usage. Component version `3.7.3` and later have a right click menu option
+	for setting your own. You can get one from this link:
+
+	[https://www.last.fm/api/account/create](https://www.last.fm/api/account/create)
 
 ## Required fonts
 For most samples, [Segoe Fluent Icons](https://download.microsoft.com/download/8/f/c/8fc7cbc3-177e-4a22-af48-2a85e1c5bffb/Segoe-Fluent-Icons.zip) is absolutely required. `Windows 11` users will already have this installed.
