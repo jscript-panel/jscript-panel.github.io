@@ -1,6 +1,10 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.7.2
+- Fix `Properties` and `Properties + Other Info` throwing script errors on empty playlists. This was a regression in `3.7.0`.
+- Various other sample fixes.
+
 ## 3.7.1
 - This update exposes all `Album Art` options in the various `Text Display` samples. And once again, they need reloading
 from the `Samples` button.
