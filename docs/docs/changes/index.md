@@ -1,6 +1,10 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.7.4
+- Update various samples with image display improvements.
+- Various bug fixes.
+
 ## 3.7.3
 - Users of `Last.fm Bio`, `Last.fm Bio + Images` and `Last.fm Artist Info + User Info` now need to set their own Last.fm API key via
 the right click menu. You can get one from this link: [https://www.last.fm/api/account/create](https://www.last.fm/api/account/create)
