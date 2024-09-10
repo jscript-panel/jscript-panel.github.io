@@ -232,12 +232,13 @@ Returns a `number` which can be supplied to [utils.ReadTextFile](#utilsreadtextf
 
 This may not be accurate and returns `0` if an error occurred.
 
-## `utils.DownloadFileAsync(window_id, url, path)`
-|Arguments|||
-|---|---|---|
-|window_id|[window.ID](window.md)|
-|url|`string`|The remote file you want to download.|
-|path|`string`|Full path including extension. The parent folder must already exist.|
+## `utils.DownloadFileAsync(window_id, url, path[, verify_image])`
+||Arguments|||
+|---|---|---|---|
+||window_id|[window.ID](window.md)|
+||url|`string`|The remote file you want to download.|
+||path|`string`|Full path including extension. The parent folder must already exist.|
+|:octicons-tag-24: 3.7.5|verify_image|`boolean`|Default `false`.|
 
 No return value.
 
@@ -367,7 +368,7 @@ Returns a `string`.
 |post_data|`string`|This is ignored for `GET` requests and can be omitted. It is required for `POST` requests. It could be form data or a stringified `JSON` object/array.|
 
 !!! note
-	This is for fetching plain text only. See [utils.DownloadFileAsync](#utilsdownloadfileasyncwindow_id-url-path) for downloading binary files or [utils.DownloadImageAsync](#utilsdownloadimageasyncwindow_id-url) for downloading images in memory.
+	This is for fetching plain text only. See [utils.DownloadFileAsync](#utilsdownloadfileasyncwindow_id-url-path-verify_image) for downloading binary files or [utils.DownloadImageAsync](#utilsdownloadimageasyncwindow_id-url) for downloading images in memory.
 
 Returns a unique `task_id` which is used as the first argument in
 the [on_http_request_done](../callbacks/component.md#on_http_request_donetask_id-success-response_text-status-response_headers) callback.

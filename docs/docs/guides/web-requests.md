@@ -1,5 +1,5 @@
 !!! note
-	This is for fetching plain text only. See [utils.DownloadFileAsync](../namespaces/utils.md#utilsdownloadfileasyncwindow_id-url-path) for downloading binary files or [utils.DownloadImageAsync](../namespaces/utils.md#utilsdownloadimageasyncwindow_id-url) for downloading images in memory.
+	This is for fetching plain text only. See [utils.DownloadFileAsync](../namespaces/utils.md#utilsdownloadfileasyncwindow_id-url-path-verify_image) for downloading binary files or [utils.DownloadImageAsync](../namespaces/utils.md#utilsdownloadimageasyncwindow_id-url) for downloading images in memory.
 
 See also: [utils.HTTPRequestAsync](../namespaces/utils.md#utilshttprequestasyncwindow_id-type-url-user_agent_or_headers-post_data) and
 [on_http_request_done](../callbacks/component.md#on_http_request_donetask_id-success-response_text-status-response_headers).

@@ -1,11 +1,11 @@
 ## `on_download_file_done(path, success, error_text)`
 |Arguments|||
 |---|---|---|
-|path|`string`|The path that was originally supplied to [utils.DownloadFileAsync](../namespaces/utils.md#utilsdownloadfileasyncwindow_id-url-path).|
+|path|`string`|The path that was originally supplied to [utils.DownloadFileAsync](../namespaces/utils.md#utilsdownloadfileasyncwindow_id-url-path-verify_image).|
 |success|`boolean`|If `true` it means the web request was succesful and the file was saved correctly.|
 |error_text|`string`|Empty if success is `true`. If success is `false`, it should describe what went wrong.|
 
-Called when thread created by [utils.DownloadFileAsync](../namespaces/utils.md#utilsdownloadfileasyncwindow_id-url-path) is done.
+Called when thread created by [utils.DownloadFileAsync](../namespaces/utils.md#utilsdownloadfileasyncwindow_id-url-path-verify_image) is done.
 
 ## `on_download_image_done(url, image)`
 |Arguments|||
