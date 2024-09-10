@@ -1,6 +1,11 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.7.5
+- Update [utils.DownloadFileAsync](../namespaces/utils.md#utilsdownloadfileasyncwindow_id-url-path-verify_image) with
+new `verify_image` argument.
+- Update `Thumbs` and `Images` samples to use the above method as it has been noticed that `Last.fm` can serve files which are not images.
+
 ## 3.7.4
 - Update various samples with image display improvements.
 - Various bug fixes.
