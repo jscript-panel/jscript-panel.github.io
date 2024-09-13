@@ -1,6 +1,10 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.7.8
+- Fix `Last.fm` web request bugs after changing the api key. The bug would have fixed itself
+after restarting `foobar2000` but that shouldn't have been necessary.
+
 ## 3.7.7
 - This is just a further refinement of the bug fix in `3.7.6`.
 
