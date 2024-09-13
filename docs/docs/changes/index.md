@@ -1,6 +1,9 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.7.6
+- Hopefully fix deadlocks when using `Columns UI` to switch themes containing `JScript Panel 3` instances.
+
 ## 3.7.5
 - Update [utils.DownloadFileAsync](../namespaces/utils.md#utilsdownloadfileasyncwindow_id-url-path-verify_image) with
 new `verify_image` argument.
