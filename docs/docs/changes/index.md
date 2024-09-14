@@ -3,6 +3,8 @@
 
 ## 3.7.9
 - Fix an ugly timer related crash. Apologies to anyone affected by this.
+- `Smooth Playlist Manager` and the playlist manager built in to `JS Playlist` now show a distinction
+between autoplaylists and playlists that are locked. Previously, they shared the same icon.
 
 ## 3.7.8
 - Fix `Last.fm` web request bugs after changing the api key. The bug would have fixed itself
