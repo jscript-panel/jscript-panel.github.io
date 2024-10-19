@@ -16,10 +16,6 @@ This was originally created by [Br3tt aka Falstaff](https://www.deviantart.com/b
     * List
     * Grid
 
-!!! note
-	See this [forum post](https://hydrogenaud.io/index.php/topic,110499.msg1042905.html#msg1042905) if
-	you preferred the other display modes that were available in previous versions.
-
 - Smooth scrolling.
 - Change colours and fonts in [foobar2000](https://www.foobar2000.org) `Preferences` > `Display` > `DefaultUI` or `ColumsUI`.
 - Alternatively, you can configure independent custom colours from the right click menu.
