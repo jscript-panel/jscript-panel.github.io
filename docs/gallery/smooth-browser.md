@@ -1,10 +1,10 @@
 This was originally created by [Br3tt aka Falstaff](https://www.deviantart.com/br3tt).
 
-=== "List"
-	![browser column album art](../images/smooth-browser-list.png)
-
 === "Grid"
 	![browser album art grid](../images/smooth-browser-grid.png)
+
+=== "List"
+	![browser column album art](../images/smooth-browser-list.png)
 
 !!! note
 	Performance may appear sluggish on first run/scrolling through new items
