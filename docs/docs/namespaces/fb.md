@@ -148,6 +148,11 @@ until `foobar2000` is closed. To disable this advanced logging, remove this meth
 Console messages will point directly at the `C++` source code and this is something that you can
 ask about in the [main support thread](https://hydrogenaud.io/index.php/topic,110499.0.html).
 
+## `fb.GetActiveDSPs()`
+:octicons-tag-24: 3.8.1
+
+Returns a `VBArray` so you need to use `.toArray()` on the result.
+
 ## `fb.GetAlbumArtStub([art_id])`
 :octicons-tag-24: 3.3.10
 
