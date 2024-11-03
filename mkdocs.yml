@@ -1,0 +1,120 @@
+site_name: JScript Panel 3
+copyright: Copyright &copy; 2022-2024 marc2003
+strict: true
+theme:
+  name: material
+  icon:
+    logo: material/language-javascript
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.sections
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: "Switch to dark mode"
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: "Switch to light mode"
+markdown_extensions:
+  - admonition
+  - attr_list
+  - meta
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+  - toc:
+      permalink: "#"
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/marc2k3
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Overview: index.md
+  - Docs:
+    - Requirements & Installation: docs/index.md
+    - Configuration Window: docs/configuration-window.md
+    - Tips: docs/tips.md
+    - Preprocessors: docs/preprocessors.md
+    - Flags: docs/flags.md
+    - Guides:
+      - Fonts: docs/guides/fonts.md
+      - Styling Ranges Of Text: docs/guides/styling-ranges-text.md
+      - $font & $rgb: docs/guides/font-rgb.md
+      - Country Flags: docs/guides/country-flags.md
+      - Gradients: docs/guides/gradients.md
+      - Playback Statistics: docs/guides/playback-statistics.md
+      - Web Requests: docs/guides/web-requests.md
+    - Callbacks:
+      - Overview: docs/callbacks/index.md
+      - Component: docs/callbacks/component.md
+      - Windows: docs/callbacks/windows.md
+      - foobar2000: docs/callbacks/foobar2000.md
+    - Interfaces:
+      - IAudioChunk: docs/interfaces/IAudioChunk.md
+      - IContextMenuManager: docs/interfaces/IContextMenuManager.md
+      - IDropAction: docs/interfaces/IDropAction.md
+      - IFileInfo: docs/interfaces/IFileInfo.md
+      - IJSGraphics: docs/interfaces/IJSGraphics.md
+      - IJSImage: docs/interfaces/IJSImage.md
+      - IMainMenuManager: docs/interfaces/IMainMenuManager.md
+      - IMenuObj: docs/interfaces/IMenuObj.md
+      - IMetadbHandle: docs/interfaces/IMetadbHandle.md
+      - IMetadbHandleList: docs/interfaces/IMetadbHandleList.md
+      - IPlayingItemLocation: docs/interfaces/IPlayingItemLocation.md
+      - IProfiler: docs/interfaces/IProfiler.md
+      - ITextLayout: docs/interfaces/ITextLayout.md
+      - ITitleFormat: docs/interfaces/ITitleFormat.md
+      - ITooltip: docs/interfaces/ITooltip.md
+    - Namespaces:
+      - console: docs/namespaces/console.md
+      - fb: docs/namespaces/fb.md
+      - plman: docs/namespaces/plman.md
+      - utils: docs/namespaces/utils.md
+      - window: docs/namespaces/window.md
+  - Changes:
+    - 3.8.x: docs/changes/index.md
+    - 3.7.x: docs/changes/3-7-x.md
+    - 3.6.x: docs/changes/3-6-x.md
+    - 3.5.x: docs/changes/3-5-x.md
+    - 3.4.x: docs/changes/3-4-x.md
+    - 3.3.x: docs/changes/3-3-x.md
+    - 3.2.x: docs/changes/3-2-x.md
+    - 3.1.x: docs/changes/3-1-x.md
+    - 3.0.x: docs/changes/3-0-x.md
+    - Upgrading: docs/changes/upgrading.md
+  - Gallery:
+      - Home: gallery/index.md
+      - JS Playlist: gallery/jsplaylist.md
+      - Smooth Browser: gallery/smooth-browser.md
+      - Smooth Playlist: gallery/smooth-playlist.md
+      - Smooth Playlist Manager: gallery/smooth-playlist-manager.md
+      - Album Art: gallery/album-art.md
+      - Allmusic: gallery/allmusic.md
+      - Images: gallery/images.md
+      - Last.fm Bio: gallery/lastfm-bio.md
+      - Last.fm Info: gallery/lastfm-info.md
+      - MusicBrainz: gallery/musicbrainz.md
+      - Play Log: gallery/play-log.md
+      - Properties + Other Info: gallery/properties-other-info.md
+      - Spectrogram Seekbar: gallery/spectrogram-seekbar.md
+      - Text Display: gallery/text-display.md
+      - Text Reader: gallery/text-reader.md
+      - Thumbs: gallery/thumbs.md
+      - Seekbars + Buttons: gallery/seekbar-button.md
+      - VU Meter: gallery/vu-meter.md
+  - Other projects: https://marc2k3.github.io
