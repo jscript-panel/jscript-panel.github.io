@@ -24,4 +24,3 @@ as deprecated in `3.3.10`. See [fb.GetAlbumArtStub](../namespaces/fb.md#fbgetalb
 A breaking change was made in `3.4.3` because of a bug that affected other components.
 `fb.AcquireSelectionHolder` and the `ISelectionHolder` interface were replaced by
 the 3 `ISelectionHolder` methods being moved to [window](../namespaces/window.md).
-See how the included samples were updated [here](https://github.com/jscript-panel/component/commit/f4d4175d39f33da15450db8080bfd77118fa86a6).
