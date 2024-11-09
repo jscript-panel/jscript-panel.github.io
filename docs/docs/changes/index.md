@@ -1,6 +1,11 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.8.3
+- Add `VU Meter 2` sample. This automatically updates the bar orientation on panel resize
+like built-in `Default UI` elements. There are no labels. Most other options are still
+available on the right click menu.
+
 ## 3.8.2
 - Add [fb.EnumerateMainMenuCommands](../namespaces/fb.md#fbenumeratemainmenucommands).
 
