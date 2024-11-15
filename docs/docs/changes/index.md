@@ -1,6 +1,10 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.8.4
+- [utils.TextBox](../namespaces/utils.md#utilstextboxprompt-title-default_value-help_text) now takes an
+optional `help_text` argument which can be viewed via a `Help` button in the dialog.
+
 ## 3.8.3
 - Add `VU Meter 2` sample. This automatically updates the bar orientation on panel resize
 like built-in `Default UI` elements. There are no labels. Most other options are still
