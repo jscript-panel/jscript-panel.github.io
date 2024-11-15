@@ -9,6 +9,25 @@ Clears entire panel with `colour`.
 
 No return value.
 
+## `DrawBitmap(bitmap, dstX, dstY, dstW, dstH, srcX, srcY, srcW, srcH[, opacity, angle])`
+:octicons-tag-24: 3.8.4
+
+|Arguments|||
+|---|---|---|
+|bitmap|[IJSBitmap](IJSBitmap.md)|
+|dstX|`number`|
+|dstY|`number`|
+|dstW|`number`|
+|dstH|`number`|
+|srcX|`number`|
+|srcY|`number`|
+|srcW|`number`|
+|srcH|`number`|
+|opacity|`number`|Floating point number between `0` and `1`. Default `1`.|
+|angle|`number`|Default `0`.|
+
+No return value.
+
 ## `DrawEllipse(centreX, centreY, radiusX, radiusY, line_width, colour)`
 |Arguments|||
 |---|---|---|

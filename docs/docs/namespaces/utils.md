@@ -447,6 +447,16 @@ Returns a `VBArray` so you need to use `.toArray()` on the result.
 ## `utils.ListFonts()`
 Returns a `VBArray` so you need to use `.toArray()` on the result.
 
+## `utils.LoadBitmap(path[, max_size])`
+:octicons-tag-24: 3.8.4
+
+|Arguments|||
+|---|---|---|
+|path|`string`|
+|max_size|Default is `0` which leaves the original untouched.
+
+Returns an [IJSBitmap](../interfaces/IJSBitmap.md) instance or `null` on failure.
+
 ## `utils.LoadImage(path[, max_size])`
 |Arguments|||
 |---|---|---|

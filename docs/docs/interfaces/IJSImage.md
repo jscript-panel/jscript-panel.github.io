@@ -50,6 +50,36 @@ No return value.
 ## `Clone()`
 Returns an `IJSImage` instance.
 
+## `CreateBitmap()`
+:octicons-tag-24: 3.8.4
+
+Return an [IJSBitmap](IJSBitmap.md) instance. You may consider using `Dispose()` immediately after
+using this to free up memory.
+
+!!! example
+	```js
+	var g_bitmap = null;
+
+	function update_bitmap() {
+		if (g_bitmap) {
+			g_bitmap.Dispose();
+			g_bitmap = null;
+		}
+
+		var handle = fb.GetNowPlaying();
+
+		if (handle) {
+			var image = handle.GetAlbumArt(0); // 0 = front
+			if (image) {
+				g_bitmap = image.CreateBitmap();
+				image.Dispose();
+			}
+		}
+	}
+	```
+
+See also: [utils.LoadBitmap](../namespaces/utils.md#utilsloadbitmappath-max_size).
+
 ## `Dispose()`
 No return value.
 

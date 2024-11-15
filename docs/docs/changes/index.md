@@ -2,6 +2,9 @@
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
 ## 3.8.4
+- Add [IJSBitmap](../interfaces/IJSBitmap.md) interface. This is for performance over the original `IJSImage`.
+- Add [IJSImage CreateBitmap](../interfaces/IJSImage.md#createbitmap) and [utils.LoadBitmap](../namespaces/utils.md#utilsloadbitmappath-max_size) methods.
+- Add [IJSGraphics DrawBitmap](../interfaces/IJSGraphics/#drawbitmapimage-dstx-dsty-dstw-dsth-srcx-srcy-srcw-srch-opacity-angle). This takes the same arguments as the original `DrawImage`.
 - [utils.TextBox](../namespaces/utils.md#utilstextboxprompt-title-default_value-help_text) now takes an
 optional `help_text` argument which can be viewed via a `Help` button in the dialog.
 
