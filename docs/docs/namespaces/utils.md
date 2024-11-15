@@ -694,17 +694,19 @@ No return value.
 No return value.
 
 ## `utils.TextBox(prompt, title[, default_value, help_text])`
-|Arguments|||
-|---|---|---|
-|prompt|`string`|
-|title|`string`|
-|default_value|`string`|Defaults to an empty string if omitted.|
-|help_text|`string`|Defaults to an empty string it omitted. If not empty, a `Help` button will show in the dialog. If `help_text` begins with `http`, it will launch a web browser otherwise it will open a popup window containing the text.|
+||Arguments|||
+|---|---|---|---|
+||prompt|`string`|
+||title|`string`|
+||default_value|`string`|Defaults to an empty string if omitted.|
+|:octicons-tag-24: 3.8.4|help_text|`string`|Defaults to an empty string it omitted. If not empty, a `Help` button will show in the dialog. If `help_text` begins with `http`, it will launch a web browser otherwise it will open a popup window containing the text.|
 
 Returns a `string`.
 
-This offers a multi-line text edit area. Note that it always throws
-an error if cancelled so you must use `try/catch`.
+This offers a multi-line text edit area.
+
+!!! note
+	This always throws an error if cancelled so you must use `try/catch`.
 
 ## `utils.TimestampToDateString(ts)`
 |Arguments|||
