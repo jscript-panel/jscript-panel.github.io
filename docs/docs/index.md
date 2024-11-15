@@ -1,7 +1,7 @@
 ## Minimum requirements & download
 |Download|Release Date|Windows|foobar2000||
 |:---|:---|:----|:---|:---|
-|[:material-download: 3.8.3](https://github.com/jscript-panel/release/releases/latest)|9th November 2024|Windows 10/11|2.1+|32bit/64bit
+|[:material-download: 3.8.4](https://github.com/jscript-panel/release/releases/latest)|15th November 2024|Windows 10/11|2.1+|32bit/64bit
 
 !!! important
 	On the 31st August 2024, it was noticed that the Last.fm API key supplied with JScript Panel for many years
