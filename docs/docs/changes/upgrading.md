@@ -12,7 +12,7 @@ support for `$rgb`. And `DrawStyledText` can be replaced by `gr.WriteText2` whic
 and `$rgb` support built in.
 
 ### Upgrading to `3.4.x` from previous versions
-`IJSGraphics` `FillGradientRectangle` and `FillGradientRectangle` have been removed. See
+`IJSGraphics` `FillGradientRectangle` and `FillGradientRectangleAdvanced` have been removed. See
 [Gradients](../guides/gradients.md) for their replacements.
 
 `window.CreateThemeManager`, `window.IsThemed` and the `IThemeManager` interface have
