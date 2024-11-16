@@ -57,10 +57,6 @@ No return value.
 
 No return value.
 
-!!! note
-	This differs from previous versions where `alpha` has been replaced
-	with `opacity`. Also, `angle` is now the last argument.
-
 ## `DrawImageWithMask(image, mask_image, x, y, w, h)`
 |Arguments|||
 |---|---|---|
