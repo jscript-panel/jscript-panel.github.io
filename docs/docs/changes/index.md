@@ -1,6 +1,11 @@
 !!! note
 	Component version `3.5.0` and later require at least `foobar2000` `2.1` and `Windows 10`.
 
+## 3.8.5
+- Add [IJSGraphics PushLayer](../interfaces/IJSGraphics.md#pushlayerx-y-w-h) and [IJSGraphics PopLayer](../interfaces/IJSGraphics.md#poplayer).
+- Fix `IJSImage` `Clone` and `CreateBitmap` bugs.
+- Update various samples to use `IJSBitmap` added in the previous release. 
+
 ## 3.8.4
 - Add [IJSBitmap](../interfaces/IJSBitmap.md) interface. This is for performance over the original `IJSImage`.
 - Add [IJSImage CreateBitmap](../interfaces/IJSImage.md#createbitmap) and [utils.LoadBitmap](../namespaces/utils.md#utilsloadbitmappath-max_size) methods.
