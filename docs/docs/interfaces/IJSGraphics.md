@@ -211,6 +211,36 @@ No return value.
 
 No return value.
 
+## `PopLayer()`
+:octicons-tag-24: 3.8.5
+
+No return value.
+
+## `PushLayer(x, y, w, h)`
+:octicons-tag-24: 3.8.5
+
+|Arguments|||
+|---|---|---|
+|x|`number`|
+|y|`number`|
+|w|`number`|
+|h|`number`|
+
+This introduces the concept of a layer. After calling `PushLayer` with
+the bounds of a rectangle, all following drawing operations are constrained
+within the bounds of that rectangle. You must call `PopLayer` when done.
+
+!!! example
+	```js
+	function on_paint(gr) {
+		gr.PushLayer(50, 50, 100, 100);
+		// do stuff
+		gr.PopLayer();
+	}
+	```
+
+No return value.
+
 ## `WriteText(text, font, colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])`
 |Arguments|||
 |---|---|---|
