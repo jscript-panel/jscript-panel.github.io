@@ -453,7 +453,7 @@ Returns a `VBArray` so you need to use `.toArray()` on the result.
 |Arguments|||
 |---|---|---|
 |path|`string`|Any valid image supported by the `Windows Imaging Component`.|
-|max_size|Default is `0` which leaves the original untouched.|
+|max_size|`number`|Default is `0` which leaves the original untouched.|
 
 Returns an [IJSBitmap](../interfaces/IJSBitmap.md) instance or `null` on failure.
 
@@ -461,7 +461,7 @@ Returns an [IJSBitmap](../interfaces/IJSBitmap.md) instance or `null` on failure
 |Arguments|||
 |---|---|---|
 |path|`string`|Any valid image supported by the `Windows Imaging Component`.|
-|max_size|Default is `0` which leaves the original untouched.|
+|max_size|`number`|Default is `0` which leaves the original untouched.|
 
 Returns an [IJSImage](../interfaces/IJSImage.md) instance or `null` on failure.
 
