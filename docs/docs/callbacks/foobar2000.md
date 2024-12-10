@@ -9,9 +9,6 @@ Called when `Always On Top` state is changed.
 Called when colours are changed via `Default UI` / `Columns UI` preferences.
 
 ## `on_console_refresh`
-!!! note
-	Requires `foobar2000` `2.0`.
-
 Called whenever new messages appear in the [foobar2000](https://www.foobar2000.org) `Console`.
 
 ## `on_cursor_follow_playback_changed(state)`
@@ -52,10 +49,10 @@ Called when the `foobar2000` library is initialised on startup. Prior to `foobar
 |handle_list|[IMetadbHandleList](../interfaces/IMetadbHandleList.md)|
 
 ## `on_library_items_changed(handle_list, fromhook)`
-||Arguments|||
-|----|---|---|---|
-||handle_list|[IMetadbHandleList](../interfaces/IMetadbHandleList.md)|
-|Requires `foobar2000` `2.0`.|fromhook|`boolean`|`true` if changes comes from `Playback Statistics` or other components that utilise the same DB functionality.
+|Arguments|||
+|---|---|---|
+|handle_list|[IMetadbHandleList](../interfaces/IMetadbHandleList.md)|
+|fromhook|`boolean`|`true` if changes comes from `Playback Statistics` or other components that utilise the same DB functionality.
 
 ## `on_library_items_removed(handle_list)`
 |Arguments|||

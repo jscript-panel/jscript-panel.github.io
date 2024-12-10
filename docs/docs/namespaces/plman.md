@@ -164,9 +164,6 @@ Starts playback by executing the default doubleclick action unless
 overridden by a lock to do something else.
 
 ## `plman.FindByGUID(str)`
-!!! note
-	Requires `foobar2000` `2.0`.
-
 |Arguments|||
 |---|---|---|
 |str|`string`|
@@ -189,9 +186,6 @@ Returns index of named playlist or newly created playlist.
 Returns the found index or `-1` on failure.
 
 ## `plman.GetGUID(playlistIndex)`
-!!! note
-	Requires `foobar2000` `2.0`.
-
 |Arguments|||
 |---|---|---|
 |playlistIndex|`number`|Must be valid.|

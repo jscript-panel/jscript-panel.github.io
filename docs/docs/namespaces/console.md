@@ -1,9 +1,6 @@
 **Methods**
 
 ## `console.GetLines([with_timestamp])`
-!!! note
-	Requires `foobar2000` `2.0`.
-
 |Arguments|||
 |---|---|---|
 |with_timestamp|`boolean`|Default `false`.|
@@ -13,9 +10,6 @@ Returns a `VBArray` so you need to use `.toArray()` on the result.
 Use in conjunction with [on_console_refresh](../callbacks/foobar2000.md#on_console_refresh).
 
 ## `console.ClearBacklog()`
-!!! note
-	Requires `foobar2000` `2.0`.
-
 No return value.
 
 ## `console.log(message)`
