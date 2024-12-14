@@ -26,9 +26,9 @@ This was originally created by [Br3tt aka Falstaff](https://www.deviantart.com/b
 ## Library only features
 - Use the right click menu to add to current/new/other playlists.
 - Double click to send to playlist and play or just send without playing. Check the right click menu for [options](../images/smooth-browser-playlist-options.png).
-- 3 group modes available:
-    * Album
-    * Artist (as of component version `3.6.5`, this is multi-value)
+- 3 group modes are available:
+    * Album (it is expected that compilation albums have a common `Album Artist` tag)
+    * Artist (as of component version `3.6.5`, multi-value tags are supported)
     * Album Artist
 - Filter box with full `Media Library` query support.
 - Multiple selections with the ++ctrl++ / ++shift++ keys are supported.
