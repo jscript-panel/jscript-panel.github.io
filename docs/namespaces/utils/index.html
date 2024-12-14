@@ -1,0 +1,4841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../plman/">
+      
+      
+        <link rel="next" href="../window/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>utils - JScript Panel 3</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#utilscalctextwidthtext-font_name-font_size-font_weight-font_style-font_stretch" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="JScript Panel 3" class="md-header__button md-logo" aria-label="JScript Panel 3" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JScript Panel 3
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              utils
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../changes/" class="md-tabs__link">
+          
+  
+  Changes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../gallery/" class="md-tabs__link">
+          
+  
+  Gallery
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://marc2k3.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  Other projects
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="JScript Panel 3" class="md-nav__button md-logo" aria-label="JScript Panel 3" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.8 2.53-2.55v-5.78h-1.7V17c0 .86-.35 1.08-.9 1.08-.58 0-.82-.4-1.09-.87zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03z"/></svg>
+
+    </a>
+    JScript Panel 3
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requirements & Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration-window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preprocessors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preprocessors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/styling-ranges-text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Styling Ranges Of Text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/font-rgb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    $font & $rgb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/country-flags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Country Flags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/gradients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gradients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/playback-statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Playback Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/web-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Callbacks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Callbacks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../callbacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../callbacks/component/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Component
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../callbacks/windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../callbacks/foobar2000/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    foobar2000
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Interfaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IAudioChunk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IAudioChunk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IContextMenuManager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IContextMenuManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IDropAction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDropAction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IFileInfo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IFileInfo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IJSBitmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IJSBitmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IJSGraphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IJSGraphics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IJSImage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IJSImage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IMainMenuManager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IMainMenuManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IMenuObj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IMenuObj
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IMetadbHandle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IMetadbHandle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IMetadbHandleList/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IMetadbHandleList
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IPlayingItemLocation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPlayingItemLocation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/IProfiler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IProfiler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/ITextLayout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ITextLayout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/ITitleFormat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ITitleFormat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaces/ITooltip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ITooltip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Namespaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Namespaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    console
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plman
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    utils
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    utils
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilscalctextwidthtext-font_name-font_size-font_weight-font_style-font_stretch" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CalcTextWidth(text, font_name, font_size[, font_weight, font_style, font_stretch])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscalctextwidth2text-font_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CalcTextWidth2(text, font_str)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscheckfontname" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CheckFont(name)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscolourpickerdefault_colour-error_on_cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ColourPicker(default_colour[, error_on_cancel])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsconverttoasciistr" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ConvertToAscii(str)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscopyfilefrom-to-overwrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CopyFile(from, to[, overwrite])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscopyfolderfrom-to-overwrite-recur" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CopyFolder(from, to[, overwrite, recur])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreatefolderpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateFolder(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreateimagewidth-height" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateImage(width, height)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreateprofilername" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateProfiler([name])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreatetextlayouttext-font_name-font_size-font_weight-font_style-font_stretch-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateTextLayout(text, font_name, font_size[, font_weight, font_style, font_stretch, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreatetextlayout2text-fonts-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateTextLayout2(text, fonts[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsdatestringtotimestampstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.DateStringToTimestamp(str)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsdetectcharsetpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.DetectCharset(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsdownloadfileasyncwindow_id-url-path-verify_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.DownloadFileAsync(window_id, url, path[, verify_image])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsdownloadimageasyncwindow_id-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.DownloadImageAsync(window_id, url)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsformatdurationseconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.FormatDuration(seconds)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsformatfilesizebytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.FormatFileSize(bytes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetclipboardtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetClipboardText()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetcountryflagcountry_or_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetCountryFlag(country_or_code)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetfilesizepath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetFileSize(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetlastmodifiedpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetLastModified(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetsyscolourindex" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetSysColour(index)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetsystemmetricsindex" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetSystemMetrics(index)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsglobpattern-exc_mask-inc_mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.Glob(pattern[, exc_mask, inc_mask])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilshashstringstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.HashString(str)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilshttprequestasyncwindow_id-type-url-user_agent_or_headers-post_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.HTTPRequestAsync(window_id, type, url[, user_agent_or_headers, post_data])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsinputboxprompt-title-default_value-error_on_cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.InputBox(prompt, title[, default_value, error_on_cancel])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsisfilepath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.IsFile(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsisfolderfolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.IsFolder(folder)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsiskeypressedvkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.IsKeyPressed(vkey)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilslistfilesfolder-recursive" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ListFiles(folder[, recursive])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilslistfoldersfolder-recursive" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ListFolders(folder[, recursive])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilslistfonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ListFonts()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsloadbitmappath-max_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.LoadBitmap(path[, max_size])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsloadimagepath-max_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.LoadImage(path[, max_size])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsloadimageasyncwindow_id-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.LoadImageAsync(window_id, path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsloadsvgpath_or_xml-max_width" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.LoadSVG(path_or_xml[, max_width])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsmessageboxprompt-title-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.MessageBox(prompt, title, flags)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsnow" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.Now()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsreadinipath-section-key-default_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ReadINI(path, section, key[, default_value])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsreadtextfilepath-codepage" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ReadTextFile(path[, codepage])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsreadutf8path" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ReadUTF8(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsremovefolderrecursivepath-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.RemoveFolderRecursive(path[, option])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsremovepathpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.RemovePath(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsrenamepathfrom-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.RenamePath(from, to)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsreplaceillegalcharsstr-modern-strip_trailing_periods" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ReplaceIllegalChars(str[, modern, strip_trailing_periods])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsrunapp-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.Run(app[, params])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsruncmdasyncwindow_id-app-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.RunCmdAsync(window_id, app, params)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilssetclipboardtexttext" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.SetClipboardText(text)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsshowpopupmessagemessage-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ShowPopupMessage(message[, title])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilstextboxprompt-title-default_value-help_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.TextBox(prompt, title[, default_value, help_text])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilstimestamptodatestringts" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.TimestampToDateString(ts)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilswriteinipath-section-key-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.WriteINI(path, section, key, value)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilswritetextfilepath-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.WriteTextFile(path, content)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Changes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Changes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.8.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/3-7-x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.7.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/3-6-x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.6.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/3-5-x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.5.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/3-4-x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/3-3-x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/3-2-x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/3-1-x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/3-0-x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.0.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/upgrading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gallery
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Gallery
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/jsplaylist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Playlist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/smooth-browser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Smooth Browser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/smooth-playlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Smooth Playlist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/smooth-playlist-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Smooth Playlist Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/album-art/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Album Art
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/allmusic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allmusic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/lastfm-bio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Last.fm Bio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/lastfm-info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Last.fm Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/musicbrainz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MusicBrainz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/play-log/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Play Log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/properties-other-info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Properties + Other Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/spectrogram-seekbar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectrogram Seekbar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/text-display/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/text-reader/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Reader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/thumbs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thumbs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/seekbar-button/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seekbars + Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gallery/vu-meter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VU Meter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://marc2k3.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilscalctextwidthtext-font_name-font_size-font_weight-font_style-font_stretch" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CalcTextWidth(text, font_name, font_size[, font_weight, font_style, font_stretch])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscalctextwidth2text-font_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CalcTextWidth2(text, font_str)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscheckfontname" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CheckFont(name)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscolourpickerdefault_colour-error_on_cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ColourPicker(default_colour[, error_on_cancel])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsconverttoasciistr" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ConvertToAscii(str)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscopyfilefrom-to-overwrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CopyFile(from, to[, overwrite])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscopyfolderfrom-to-overwrite-recur" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CopyFolder(from, to[, overwrite, recur])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreatefolderpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateFolder(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreateimagewidth-height" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateImage(width, height)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreateprofilername" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateProfiler([name])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreatetextlayouttext-font_name-font_size-font_weight-font_style-font_stretch-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateTextLayout(text, font_name, font_size[, font_weight, font_style, font_stretch, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilscreatetextlayout2text-fonts-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.CreateTextLayout2(text, fonts[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsdatestringtotimestampstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.DateStringToTimestamp(str)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsdetectcharsetpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.DetectCharset(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsdownloadfileasyncwindow_id-url-path-verify_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.DownloadFileAsync(window_id, url, path[, verify_image])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsdownloadimageasyncwindow_id-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.DownloadImageAsync(window_id, url)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsformatdurationseconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.FormatDuration(seconds)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsformatfilesizebytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.FormatFileSize(bytes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetclipboardtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetClipboardText()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetcountryflagcountry_or_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetCountryFlag(country_or_code)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetfilesizepath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetFileSize(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetlastmodifiedpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetLastModified(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetsyscolourindex" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetSysColour(index)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsgetsystemmetricsindex" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.GetSystemMetrics(index)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsglobpattern-exc_mask-inc_mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.Glob(pattern[, exc_mask, inc_mask])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilshashstringstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.HashString(str)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilshttprequestasyncwindow_id-type-url-user_agent_or_headers-post_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.HTTPRequestAsync(window_id, type, url[, user_agent_or_headers, post_data])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsinputboxprompt-title-default_value-error_on_cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.InputBox(prompt, title[, default_value, error_on_cancel])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsisfilepath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.IsFile(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsisfolderfolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.IsFolder(folder)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsiskeypressedvkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.IsKeyPressed(vkey)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilslistfilesfolder-recursive" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ListFiles(folder[, recursive])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilslistfoldersfolder-recursive" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ListFolders(folder[, recursive])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilslistfonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ListFonts()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsloadbitmappath-max_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.LoadBitmap(path[, max_size])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsloadimagepath-max_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.LoadImage(path[, max_size])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsloadimageasyncwindow_id-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.LoadImageAsync(window_id, path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsloadsvgpath_or_xml-max_width" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.LoadSVG(path_or_xml[, max_width])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsmessageboxprompt-title-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.MessageBox(prompt, title, flags)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsnow" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.Now()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsreadinipath-section-key-default_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ReadINI(path, section, key[, default_value])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsreadtextfilepath-codepage" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ReadTextFile(path[, codepage])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsreadutf8path" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ReadUTF8(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsremovefolderrecursivepath-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.RemoveFolderRecursive(path[, option])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsremovepathpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.RemovePath(path)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsrenamepathfrom-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.RenamePath(from, to)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsreplaceillegalcharsstr-modern-strip_trailing_periods" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ReplaceIllegalChars(str[, modern, strip_trailing_periods])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsrunapp-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.Run(app[, params])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsruncmdasyncwindow_id-app-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.RunCmdAsync(window_id, app, params)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilssetclipboardtexttext" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.SetClipboardText(text)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilsshowpopupmessagemessage-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.ShowPopupMessage(message[, title])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilstextboxprompt-title-default_value-help_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.TextBox(prompt, title[, default_value, help_text])
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilstimestamptodatestringts" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.TimestampToDateString(ts)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilswriteinipath-section-key-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.WriteINI(path, section, key, value)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilswritetextfilepath-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils.WriteTextFile(path, content)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>utils</h1>
+
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>utils.Version</td>
+<td><code>number</code></td>
+<td>read</td>
+</tr>
+<tr>
+<td>utils.VersionString</td>
+<td><code>string</code></td>
+<td>read</td>
+</tr>
+</tbody>
+</table>
+<p>The version number corresponds with the string like these examples:</p>
+<table>
+<thead>
+<tr>
+<th>utils.VersionString</th>
+<th>utils.Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.3.11</td>
+<td>30311</td>
+</tr>
+<tr>
+<td>3.4.1</td>
+<td>30401</td>
+</tr>
+<tr>
+<td>3.10.12</td>
+<td>31012</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<h2 id="utilscalctextwidthtext-font_name-font_size-font_weight-font_style-font_stretch"><code>utils.CalcTextWidth(text, font_name, font_size[, font_weight, font_style, font_stretch])</code><a class="headerlink" href="#utilscalctextwidthtext-font_name-font_size-font_weight-font_style-font_stretch" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_name</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_size</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_weight</td>
+<td><a href="../../flags/#dwrite_font_weight">DWRITE_FONT_WEIGHT</a></td>
+<td>Default <code>400</code>.</td>
+</tr>
+<tr>
+<td>font_style</td>
+<td><a href="../../flags/#dwrite_font_style">DWRITE_FONT_STYLE</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+<tr>
+<td>font_stretch</td>
+<td><a href="../../flags/#dwrite_font_stretch">DWRITE_FONT_STRETCH</a></td>
+<td>Default <code>5</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>number</code>.</p>
+<h2 id="utilscalctextwidth2text-font_str"><code>utils.CalcTextWidth2(text, font_str)</code><a class="headerlink" href="#utilscalctextwidth2text-font_str" title="Permanent link">#</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 3.6.11</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_str</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>number</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;blah&quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">GetFontDUI</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">CalcTextWidth2</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">font</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<h2 id="utilscheckfontname"><code>utils.CheckFont(name)</code><a class="headerlink" href="#utilscheckfontname" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If this unexpectedly returns <code>false</code> for font names you think are correct, check
+the <code>basic\DWriteFonts</code> sample. This lists all recognised fonts.</p>
+</div>
+<h2 id="utilscolourpickerdefault_colour-error_on_cancel"><code>utils.ColourPicker(default_colour[, error_on_cancel])</code><a class="headerlink" href="#utilscolourpickerdefault_colour-error_on_cancel" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_colour</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+<tr>
+<td>error_on_cancel</td>
+<td><code>boolean</code></td>
+<td>Default <code>false</code>. If set to <code>true</code>, you must use try/catch to prevent script errors.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>number</code> which can used as the <code>colour</code> in many methods.</p>
+<h2 id="utilsconverttoasciistr"><code>utils.ConvertToAscii(str)</code><a class="headerlink" href="#utilsconverttoasciistr" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>.</p>
+<h2 id="utilscopyfilefrom-to-overwrite"><code>utils.CopyFile(from, to[, overwrite])</code><a class="headerlink" href="#utilscopyfilefrom-to-overwrite" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>overwrite</td>
+<td><code>boolean</code></td>
+<td>Default <code>true</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<h2 id="utilscopyfolderfrom-to-overwrite-recur"><code>utils.CopyFolder(from, to[, overwrite, recur])</code><a class="headerlink" href="#utilscopyfolderfrom-to-overwrite-recur" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>overwrite</td>
+<td><code>boolean</code></td>
+<td>Default <code>true</code>.</td>
+</tr>
+<tr>
+<td>recur</td>
+<td><code>boolean</code></td>
+<td>Default <code>true</code>. If <code>false</code>, only files at the root of the folder are copied.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<h2 id="utilscreatefolderpath"><code>utils.CreateFolder(path)</code><a class="headerlink" href="#utilscreatefolderpath" title="Permanent link">#</a></h2>
+<p>Returns <code>true</code> on success or if folder already exists. Returns
+<code>false</code> if operation fails.</p>
+<p>Parent folders are created if they don't exist.</p>
+<h2 id="utilscreateimagewidth-height"><code>utils.CreateImage(width, height)</code><a class="headerlink" href="#utilscreateimagewidth-height" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+<tr>
+<td>height</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns an <a href="../../interfaces/IJSImage/">IJSImage</a> instance.</p>
+<h2 id="utilscreateprofilername"><code>utils.CreateProfiler([name])</code><a class="headerlink" href="#utilscreateprofilername" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>string</code></td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<p>Returns an <a href="../../interfaces/IProfiler/">IProfiler</a> instance. Check
+link for an example.</p>
+<h2 id="utilscreatetextlayouttext-font_name-font_size-font_weight-font_style-font_stretch-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity"><code>utils.CreateTextLayout(text, font_name, font_size[, font_weight, font_style, font_stretch, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])</code><a class="headerlink" href="#utilscreatetextlayouttext-font_name-font_size-font_weight-font_style-font_stretch-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td><code>string</code></td>
+<td>As of component version <code>3.6.0</code>, this may contain <code>$rgb</code> and <code>$font</code> code.</td>
+</tr>
+<tr>
+<td>font_name</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_size</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_weight</td>
+<td><a href="../../flags/#dwrite_font_weight">DWRITE_FONT_WEIGHT</a></td>
+<td>Default <code>400</code>.</td>
+</tr>
+<tr>
+<td>font_style</td>
+<td><a href="../../flags/#dwrite_font_style">DWRITE_FONT_STYLE</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+<tr>
+<td>font_stretch</td>
+<td><a href="../../flags/#dwrite_font_stretch">DWRITE_FONT_STRETCH</a></td>
+<td>Default <code>5</code>.</td>
+</tr>
+<tr>
+<td>text_alignment</td>
+<td><a href="../../flags/#dwrite_text_alignment">DWRITE_TEXT_ALIGNMENT</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+<tr>
+<td>paragraph_alignment</td>
+<td><a href="../../flags/#dwrite_paragraph_alignment">DWRITE_PARAGRAPH_ALIGNMENT</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+<tr>
+<td>word_wrapping</td>
+<td><a href="../../flags/#dwrite_word_wrapping">DWRITE_WORD_WRAPPING</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+<tr>
+<td>trimming_granularity</td>
+<td><a href="../../flags/#dwrite_trimming_granularity">DWRITE_TRIMMING_GRANULARITY</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns an <a href="../../interfaces/ITextLayout/">ITextLayout</a> instance.</p>
+<p>You typically use this when you want to calculate the height of a string
+that wraps over multiple lines or need scrolling. When passing to <a href="../../interfaces/IJSGraphics/#writetextlayouttext_layout-colour-x-y-w-h-vertical_offset">IJSGraphics WriteTextLayout</a>,
+you can supply a vertical offset.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can load this directly from the <a href="../../configuration-window/">Configuration Window</a> <code>Samples</code> button <code>basic/SimpleScroll</code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ==PREPROCESSOR==</span>
+<span class="c1">// @name &quot;SimpleScroll&quot;</span>
+<span class="c1">// @author &quot;marc2003&quot;</span>
+<span class="c1">// @import &quot;%fb2k_component_path%helpers.txt&quot;</span>
+<span class="c1">// ==/PREPROCESSOR==</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#39;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">CreateTextLayout</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Segoe UI&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">24</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">text_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">box</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">y</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">w</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">h</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">on_paint</span><span class="p">(</span><span class="nx">gr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">gr</span><span class="p">.</span><span class="nx">Clear</span><span class="p">(</span><span class="nx">RGB</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">));</span>
+<span class="w">    </span><span class="nx">gr</span><span class="p">.</span><span class="nx">DrawRectangle</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">));</span>
+<span class="w">    </span><span class="nx">gr</span><span class="p">.</span><span class="nx">WriteTextLayout</span><span class="p">(</span><span class="nx">layout</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">),</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="p">,</span><span class="w"> </span><span class="nx">offset</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">on_mouse_wheel</span><span class="p">(</span><span class="nx">step</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">text_height</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">offset</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">step</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">offset</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="nx">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">offset</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">text_height</span><span class="p">)</span><span class="w"> </span><span class="nx">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">text_height</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">Repaint</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">on_size</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">box</span><span class="p">.</span><span class="nx">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">Width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">Height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">text_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layout</span><span class="p">.</span><span class="nx">CalcTextHeight</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">w</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">text_height</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="p">)</span><span class="w"> </span><span class="nx">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">offset</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">text_height</span><span class="p">)</span><span class="w"> </span><span class="nx">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="nx">h</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">text_height</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="utilscreatetextlayout2text-fonts-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity"><code>utils.CreateTextLayout2(text, fonts[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])</code><a class="headerlink" href="#utilscreatetextlayout2text-fonts-text_alignment-paragraph_alignment-word_wrapping-trimming_granularity" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td><code>string</code></td>
+<td>As of component version <code>3.6.0</code>, this may contain <code>$rgb</code> code.</td>
+</tr>
+<tr>
+<td>fonts</td>
+<td><code>string</code></td>
+<td>This must be a stringified array of fonts. Anything other than an array will throw a script error.</td>
+</tr>
+<tr>
+<td>text_alignment</td>
+<td><a href="../../flags/#dwrite_text_alignment">DWRITE_TEXT_ALIGNMENT</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+<tr>
+<td>paragraph_alignment</td>
+<td><a href="../../flags/#dwrite_paragraph_alignment">DWRITE_PARAGRAPH_ALIGNMENT</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+<tr>
+<td>word_wrapping</td>
+<td><a href="../../flags/#dwrite_word_wrapping">DWRITE_WORD_WRAPPING</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+<tr>
+<td>trimming_granularity</td>
+<td><a href="../../flags/#dwrite_trimming_granularity">DWRITE_TRIMMING_GRANULARITY</a></td>
+<td>Default <code>0</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns an <a href="../../interfaces/ITextLayout/">ITextLayout</a> instance.</p>
+<p>Use this if you want to apply multiple fonts to a single string of text and need scrolling support. When passing
+to <a href="../../interfaces/IJSGraphics/#writetextlayouttext_layout-colour-x-y-w-h-vertical_offset">IJSGraphics WriteTextLayout</a>,
+you can supply a vertical offset.</p>
+<p>See <a href="../../guides/styling-ranges-text/">Styling Ranges Of Text</a> for more advanced usage notes.</p>
+<h2 id="utilsdatestringtotimestampstr"><code>utils.DateStringToTimestamp(str)</code><a class="headerlink" href="#utilsdatestringtotimestampstr" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td><code>string</code></td>
+<td>Must be in full <code>YYYY-MM-DD HH:MM:SS</code> format.</td>
+</tr>
+</tbody>
+</table>
+<p>The return value is seconds since 00:00:00 Thursday, 1 January 1970 UTC.</p>
+<p>It is expected date strings are timezone adjusted but timestamps are UTC (not adjusted).</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">last_played_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;2018-08-30 00:00:00&quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">last_played_timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">DateStringToTimestamp</span><span class="p">(</span><span class="nx">last_played_string</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">Now</span><span class="p">();</span>
+
+<span class="c1">// number of seconds in a day</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">24</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="p">;</span>
+
+<span class="c1">// number of days since last played</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">now</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">last_played_timestamp</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">day</span><span class="p">));</span>
+</code></pre></div>
+</div>
+<h2 id="utilsdetectcharsetpath"><code>utils.DetectCharset(path)</code><a class="headerlink" href="#utilsdetectcharsetpath" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td>Path to a text file.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>number</code> which can be supplied to <a href="#utilsreadtextfilepath-codepage">utils.ReadTextFile</a>.</p>
+<p>This may not be accurate and returns <code>0</code> if an error occurred.</p>
+<h2 id="utilsdownloadfileasyncwindow_id-url-path-verify_image"><code>utils.DownloadFileAsync(window_id, url, path[, verify_image])</code><a class="headerlink" href="#utilsdownloadfileasyncwindow_id-url-path-verify_image" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>window_id</td>
+<td><a href="../window/">window.ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>url</td>
+<td><code>string</code></td>
+<td>The remote file you want to download.</td>
+</tr>
+<tr>
+<td></td>
+<td>path</td>
+<td><code>string</code></td>
+<td>Full path including extension. The parent folder must already exist.</td>
+</tr>
+<tr>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 3.7.5</td>
+<td>verify_image</td>
+<td><code>boolean</code></td>
+<td>Default <code>false</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>No return value.</p>
+<p>Use in conjunction with <a href="../../callbacks/component/#on_download_file_donepath-success-error_text">on_download_file_done</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must ensure none of the folders in the <code>path</code> end with a period character.</p>
+</div>
+<h2 id="utilsdownloadimageasyncwindow_id-url"><code>utils.DownloadImageAsync(window_id, url)</code><a class="headerlink" href="#utilsdownloadimageasyncwindow_id-url" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>window_id</td>
+<td><a href="../window/">window.ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td>url</td>
+<td><code>string</code></td>
+<td>The image url you want to download.</td>
+</tr>
+</tbody>
+</table>
+<p>No return value.</p>
+<p>Use in conjunction with <a href="../../callbacks/component/#on_download_image_doneurl-image">on_download_image_done</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is useful for temporary display of images you consider disposable and don't want to keep. Use
+<code>utils.DownloadFileAsync</code> if you want a permanent copy.</p>
+<p>There is a maximum size limit in place. Anything larger than <code>64MB</code> will fail to download.</p>
+</div>
+<h2 id="utilsformatdurationseconds"><code>utils.FormatDuration(seconds)</code><a class="headerlink" href="#utilsformatdurationseconds" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>seconds</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">playlist_items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">plman</span><span class="p">.</span><span class="nx">GetPlaylistItems</span><span class="p">(</span><span class="nx">plman</span><span class="p">.</span><span class="nx">ActivePlaylist</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">playlist_length_seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">playlist_items</span><span class="p">.</span><span class="nx">CalcTotalDuration</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">FormatDuration</span><span class="p">(</span><span class="nx">playlist_length_seconds</span><span class="p">));</span><span class="w"> </span><span class="c1">// 5:24:44</span>
+</code></pre></div>
+</div>
+<h2 id="utilsformatfilesizebytes"><code>utils.FormatFileSize(bytes)</code><a class="headerlink" href="#utilsformatfilesizebytes" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bytes</td>
+<td><code>number</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">playlist_items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">plman</span><span class="p">.</span><span class="nx">GetPlaylistItems</span><span class="p">(</span><span class="nx">plman</span><span class="p">.</span><span class="nx">ActivePlaylist</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">playlist_bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">playlist_items</span><span class="p">.</span><span class="nx">CalcTotalSize</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">FormatFileSize</span><span class="p">(</span><span class="nx">playlist_bytes</span><span class="p">));</span><span class="w"> </span><span class="c1">// 601 MB</span>
+</code></pre></div>
+</div>
+<h2 id="utilsgetclipboardtext"><code>utils.GetClipboardText()</code><a class="headerlink" href="#utilsgetclipboardtext" title="Permanent link">#</a></h2>
+<p>Returns a <code>string</code>. It will be empty if the clipboard contents are not text.</p>
+<h2 id="utilsgetcountryflagcountry_or_code"><code>utils.GetCountryFlag(country_or_code)</code><a class="headerlink" href="#utilsgetcountryflagcountry_or_code" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>country_or_code</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>. Could be empty on failure.</p>
+<p>See <a href="../../guides/country-flags/">Country Flags</a>.</p>
+<h2 id="utilsgetfilesizepath"><code>utils.GetFileSize(path)</code><a class="headerlink" href="#utilsgetfilesizepath" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the size in bytes.</p>
+<h2 id="utilsgetlastmodifiedpath"><code>utils.GetLastModified(path)</code><a class="headerlink" href="#utilsgetlastmodifiedpath" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The return value is seconds since 00:00:00 Thursday, 1 January 1970 UTC.</p>
+<h2 id="utilsgetsyscolourindex"><code>utils.GetSysColour(index)</code><a class="headerlink" href="#utilsgetsyscolourindex" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td><code>number</code></td>
+<td><a href="https://docs.microsoft.com/en-gb/windows/win32/api/winuser/nf-winuser-getsyscolor">https://docs.microsoft.com/en-gb/windows/win32/api/winuser/nf-winuser-getsyscolor</a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>number</code> which can used as the <code>colour</code> in many methods. Could
+be <code>0</code> if the <code>index</code> is invalid.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">splitter_colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">GetSysColour</span><span class="p">(</span><span class="mf">15</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<h2 id="utilsgetsystemmetricsindex"><code>utils.GetSystemMetrics(index)</code><a class="headerlink" href="#utilsgetsystemmetricsindex" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td><code>number</code></td>
+<td><a href="https://docs.microsoft.com/en-gb/windows/win32/api/winuser/nf-winuser-getsystemmetrics">https://docs.microsoft.com/en-gb/windows/win32/api/winuser/nf-winuser-getsystemmetrics</a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>number</code>.</p>
+<h2 id="utilsglobpattern-exc_mask-inc_mask"><code>utils.Glob(pattern[, exc_mask, inc_mask])</code><a class="headerlink" href="#utilsglobpattern-exc_mask-inc_mask" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pattern</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>exc_mask</td>
+<td><a href="../../flags/#file_attribute">FILE_ATTRIBUTE</a></td>
+<td>Default <code>FILE_ATTRIBUTE_DIRECTORY</code>.</td>
+</tr>
+<tr>
+<td>inc_mask</td>
+<td><a href="../../flags/#file_attribute">FILE_ATTRIBUTE</a></td>
+<td>Default <code>0xffffffff</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>VBArray</code> so you need to use <code>.toArray()</code> on the result.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">Glob</span><span class="p">(</span><span class="s2">&quot;C:\\Pictures\\*.jpg&quot;</span><span class="p">).</span><span class="nx">toArray</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<h2 id="utilshashstringstr"><code>utils.HashString(str)</code><a class="headerlink" href="#utilshashstringstr" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>.</p>
+<h2 id="utilshttprequestasyncwindow_id-type-url-user_agent_or_headers-post_data"><code>utils.HTTPRequestAsync(window_id, type, url[, user_agent_or_headers, post_data])</code><a class="headerlink" href="#utilshttprequestasyncwindow_id-type-url-user_agent_or_headers-post_data" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>window_id</td>
+<td><a href="../window/">window.ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>number</code></td>
+<td>Use <code>0</code> for <code>GET</code>, <code>1</code> for <code>POST</code>.</td>
+</tr>
+<tr>
+<td>url</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>user_agent_or_headers</td>
+<td><code>string</code></td>
+<td>Optional. See <a href="../../guides/web-requests/">Web Requests</a> for examples.</td>
+</tr>
+<tr>
+<td>post_data</td>
+<td><code>string</code></td>
+<td>This is ignored for <code>GET</code> requests and can be omitted. It is required for <code>POST</code> requests. It could be form data or a stringified <code>JSON</code> object/array.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is for fetching plain text only. See <a href="#utilsdownloadfileasyncwindow_id-url-path-verify_image">utils.DownloadFileAsync</a> for downloading binary files or <a href="#utilsdownloadimageasyncwindow_id-url">utils.DownloadImageAsync</a> for downloading images in memory.</p>
+</div>
+<p>Returns a unique <code>task_id</code> which is used as the first argument in
+the <a href="../../callbacks/component/#on_http_request_donetask_id-success-response_text-status-response_headers">on_http_request_done</a> callback.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When making a <code>POST</code> request, you should set a <code>Content-Type</code> header. Valid
+values could be <code>application/json</code> or <code>application/x-www-form-urlencoded</code>.</p>
+</div>
+<p>See <a href="../../guides/web-requests/">Web Requests</a> for examples.</p>
+<h2 id="utilsinputboxprompt-title-default_value-error_on_cancel"><code>utils.InputBox(prompt, title[, default_value, error_on_cancel])</code><a class="headerlink" href="#utilsinputboxprompt-title-default_value-error_on_cancel" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prompt</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>default_value</td>
+<td><code>string</code></td>
+<td>Defaults to an empty string if omitted.</td>
+</tr>
+<tr>
+<td>error_on_cancel</td>
+<td><code>boolean</code></td>
+<td>Default <code>false</code>. If set to <code>true</code>, you must use try/catch to prevent script errors.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>.</p>
+<p>With <code>error_on_cancel</code> not set (or set to <code>false</code>), cancelling the dialog will return <code>default_value</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">InputBox</span><span class="p">(</span><span class="s2">&quot;Enter your username&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JScript Panel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<p>Using the above example, you can't tell if <code>OK</code> or <code>Cancel</code> was
+pressed if the return value is the same as <code>default_value</code>.</p>
+<p>If you need to know, set <code>error_on_cancel</code> to <code>true</code> which throws
+a script error when <code>Cancel</code> is pressed.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">InputBox</span><span class="p">(</span><span class="s2">&quot;Enter your name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JScript Panel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// OK was pressed.</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Dialog was closed by pressing Esc, Cancel or the Close button.</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="utilsisfilepath"><code>utils.IsFile(path)</code><a class="headerlink" href="#utilsisfilepath" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<h2 id="utilsisfolderfolder"><code>utils.IsFolder(folder)</code><a class="headerlink" href="#utilsisfolderfolder" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>folder</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<h2 id="utilsiskeypressedvkey"><code>utils.IsKeyPressed(vkey)</code><a class="headerlink" href="#utilsiskeypressedvkey" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vkey</td>
+<td><code>number</code></td>
+<td><a href="https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<h2 id="utilslistfilesfolder-recursive"><code>utils.ListFiles(folder[, recursive])</code><a class="headerlink" href="#utilslistfilesfolder-recursive" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>folder</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>recursive</td>
+<td><code>boolean</code></td>
+<td>Default <code>false</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>VBArray</code> so you need to use <code>.toArray()</code> on the result.</p>
+<h2 id="utilslistfoldersfolder-recursive"><code>utils.ListFolders(folder[, recursive])</code><a class="headerlink" href="#utilslistfoldersfolder-recursive" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>folder</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>recursive</td>
+<td><code>boolean</code></td>
+<td>Default <code>false</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>VBArray</code> so you need to use <code>.toArray()</code> on the result.</p>
+<h2 id="utilslistfonts"><code>utils.ListFonts()</code><a class="headerlink" href="#utilslistfonts" title="Permanent link">#</a></h2>
+<p>Returns a <code>VBArray</code> so you need to use <code>.toArray()</code> on the result.</p>
+<h2 id="utilsloadbitmappath-max_size"><code>utils.LoadBitmap(path[, max_size])</code><a class="headerlink" href="#utilsloadbitmappath-max_size" title="Permanent link">#</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 3.8.4</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td>Any valid image supported by the <code>Windows Imaging Component</code>.</td>
+</tr>
+<tr>
+<td>max_size</td>
+<td><code>number</code></td>
+<td>Default is <code>0</code> which leaves the original untouched.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns an <a href="../../interfaces/IJSBitmap/">IJSBitmap</a> instance or <code>null</code> on failure.</p>
+<h2 id="utilsloadimagepath-max_size"><code>utils.LoadImage(path[, max_size])</code><a class="headerlink" href="#utilsloadimagepath-max_size" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td>Any valid image supported by the <code>Windows Imaging Component</code>.</td>
+</tr>
+<tr>
+<td>max_size</td>
+<td><code>number</code></td>
+<td>Default is <code>0</code> which leaves the original untouched.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns an <a href="../../interfaces/IJSImage/">IJSImage</a> instance or <code>null</code> on failure.</p>
+<h2 id="utilsloadimageasyncwindow_id-path"><code>utils.LoadImageAsync(window_id, path)</code><a class="headerlink" href="#utilsloadimageasyncwindow_id-path" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>window_id</td>
+<td><a href="../window/">window.ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>No return value.</p>
+<p>Use in conjunction with <a href="../../callbacks/component/#on_load_image_doneimage_path-image">on_load_image_done</a>.</p>
+<h2 id="utilsloadsvgpath_or_xml-max_width"><code>utils.LoadSVG(path_or_xml[, max_width])</code><a class="headerlink" href="#utilsloadsvgpath_or_xml-max_width" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path_or_xml</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>max_width</td>
+<td><code>number</code></td>
+<td>Default is <code>0</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns an <a href="../../interfaces/IJSImage/">IJSImage</a> instance or <code>null</code> on failure.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="SVG" src="../../../images/android-svg.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">svg_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fb</span><span class="p">.</span><span class="nx">ComponentPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;samples\\svg\\android.svg&#39;</span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">LoadSVG</span><span class="p">(</span><span class="nx">svg_file</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">large</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">LoadSVG</span><span class="p">(</span><span class="nx">svg_file</span><span class="p">,</span><span class="w"> </span><span class="mf">512</span><span class="p">);</span><span class="w"> </span><span class="c1">// set optional max_width</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">on_paint</span><span class="p">(</span><span class="nx">gr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">gr</span><span class="p">.</span><span class="nx">DrawImage</span><span class="p">(</span><span class="nx">original</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">original</span><span class="p">.</span><span class="nx">Width</span><span class="p">,</span><span class="w"> </span><span class="nx">original</span><span class="p">.</span><span class="nx">Height</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">original</span><span class="p">.</span><span class="nx">Width</span><span class="p">,</span><span class="w"> </span><span class="nx">original</span><span class="p">.</span><span class="nx">Height</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">gr</span><span class="p">.</span><span class="nx">DrawImage</span><span class="p">(</span><span class="nx">large</span><span class="p">,</span><span class="w"> </span><span class="nx">original</span><span class="p">.</span><span class="nx">Width</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">large</span><span class="p">.</span><span class="nx">Width</span><span class="p">,</span><span class="w"> </span><span class="nx">large</span><span class="p">.</span><span class="nx">Height</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">large</span><span class="p">.</span><span class="nx">Width</span><span class="p">,</span><span class="w"> </span><span class="nx">large</span><span class="p">.</span><span class="nx">Height</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="utilsmessageboxprompt-title-flags"><code>utils.MessageBox(prompt, title, flags)</code><a class="headerlink" href="#utilsmessageboxprompt-title-flags" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prompt</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>flags</td>
+<td><a href="../../flags/#messagebox-buttons">MessageBox Buttons</a>, <a href="../../flags/#messagebox-icons">MessageBox Icons</a></td>
+<td>Can be combined.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <a href="../../flags/#messagebox-return-values">MessageBox Return Value</a>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ==PREPROCESSOR==</span>
+<span class="c1">// @import &quot;%fb2k_component_path%helpers.txt&quot;</span>
+<span class="c1">// ==/PREPROCESSOR==</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Do you really want to open the Preferences?&quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;A very important question&quot;</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">MessageBox</span><span class="p">(</span><span class="nx">prompt</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">MB_YESNO</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">MB_ICONQUESTION</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">IDYES</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fb</span><span class="p">.</span><span class="nx">ShowPreferences</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="utilsnow"><code>utils.Now()</code><a class="headerlink" href="#utilsnow" title="Permanent link">#</a></h2>
+<p>Returns a Unix timestamp.</p>
+<p>This is just shorthand instead of writing</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="utilsreadinipath-section-key-default_value"><code>utils.ReadINI(path, section, key[, default_value])</code><a class="headerlink" href="#utilsreadinipath-section-key-default_value" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>section</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>key</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>default_value</td>
+<td><code>string</code></td>
+<td>This will be the return value if the <code>key</code> isn't found. Defaults to an empty string if omitted.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>. The maximum length is limited to 255 characters.</p>
+<p>An INI file should look something like this:</p>
+<div class="highlight"><pre><span></span><code>[section]
+key=val
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReadINI</span><span class="p">(</span><span class="s2">&quot;e:\\my_file.ini&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Last.fm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<h2 id="utilsreadtextfilepath-codepage"><code>utils.ReadTextFile(path[, codepage])</code><a class="headerlink" href="#utilsreadtextfilepath-codepage" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>codepage</td>
+<td><code>number</code></td>
+<td>Default <code>0</code>. See <a href="#utilsdetectcharsetpath">utils.DetectCharset</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>. Will be empty if <code>path</code> doesn't exist or there
+was an error opening it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the file is determined to be <code>UTF16-LE</code> or <code>UTF8</code>, any
+supplied <code>codepage</code> will be ignored.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Simple</label><label for="__tabbed_1_2">Using utils.DetectCharset</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;E:\\some text file.txt&quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReadTextFile</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;E:\\some text file.txt&quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">codepage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">DetectCharset</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReadTextFile</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span><span class="w"> </span><span class="nx">codepage</span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="utilsreadutf8path"><code>utils.ReadUTF8(path)</code><a class="headerlink" href="#utilsreadutf8path" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>. Will be empty if <code>path</code> doesn't exist or there
+was an error opening it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's preferable to use this when you know the file
+is <code>UTF8</code>. If you're unsure, continue to use <a href="#utilsreadtextfilepath-codepage">utils.ReadTextFile</a></p>
+</div>
+<h2 id="utilsremovefolderrecursivepath-option"><code>utils.RemoveFolderRecursive(path[, option])</code><a class="headerlink" href="#utilsremovefolderrecursivepath-option" title="Permanent link">#</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 3.5.0</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>option</td>
+<td><code>number</code></td>
+<td>Default <code>0</code> which removes the folder and its contents. Supplying <code>1</code> clears the contents but leaves the root folder in place.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<h2 id="utilsremovepathpath"><code>utils.RemovePath(path)</code><a class="headerlink" href="#utilsremovepathpath" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td>Can be a file or folder. If it's a folder, it must be empty.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<h2 id="utilsrenamepathfrom-to"><code>utils.RenamePath(from, to)</code><a class="headerlink" href="#utilsrenamepathfrom-to" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>Can be a file or folder.</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<h2 id="utilsreplaceillegalcharsstr-modern-strip_trailing_periods"><code>utils.ReplaceIllegalChars(str[, modern, strip_trailing_periods])</code><a class="headerlink" href="#utilsreplaceillegalcharsstr-modern-strip_trailing_periods" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>modern</td>
+<td><code>boolean</code></td>
+<td>Default <code>true</code>.</td>
+</tr>
+<tr>
+<td>strip_trailing_periods</td>
+<td><code>boolean</code></td>
+<td>Default <code>false</code>. Set to <code>true</code> if <code>str</code> is a folder name.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Modern</label><label for="__tabbed_2_2">Legacy</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">chars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&quot;\\\/*|:&lt;&gt;?&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReplaceIllegalChars</span><span class="p">(</span><span class="nx">chars</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code>&#39;&#39;⧵⁄∗∣∶˂˃？
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">chars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&quot;\\\/*|:&lt;&gt;?&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReplaceIllegalChars</span><span class="p">(</span><span class="nx">chars</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code>&#39;&#39;--x_-__
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="utilsrunapp-params"><code>utils.Run(app[, params])</code><a class="headerlink" href="#utilsrunapp-params" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app</td>
+<td><code>string</code></td>
+<td>Can be the path to a file and <code>Windows</code> will open the associated application.</td>
+</tr>
+<tr>
+<td>params</td>
+<td><code>string</code></td>
+<td>Defaults to an empty string if omitted.</td>
+</tr>
+</tbody>
+</table>
+<p>No return value.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nx">utils</span><span class="p">.</span><span class="nx">Run</span><span class="p">(</span><span class="s1">&#39;notepad&#39;</span><span class="p">);</span>
+<span class="nx">utils</span><span class="p">.</span><span class="nx">Run</span><span class="p">(</span><span class="s1">&#39;https://www.foobar2000.org&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">IsFile</span><span class="p">(</span><span class="nx">file</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">utils</span><span class="p">.</span><span class="nx">Run</span><span class="p">(</span><span class="s1">&#39;explorer&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;/select,&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="utilsruncmdasyncwindow_id-app-params"><code>utils.RunCmdAsync(window_id, app, params)</code><a class="headerlink" href="#utilsruncmdasyncwindow_id-app-params" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>window_id</td>
+<td><a href="../window/">window.ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td>app</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>params</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a unique <code>task_id</code> which is used as the first argument in
+the <a href="../../callbacks/component/#on_run_cmd_async_donetask_id">on_run_cmd_async_done</a> callback.</p>
+<p>This is for launching command line tools only and they will run in background threads.
+You'll get notified when complete. The callback will not be called
+if supplied with a bad <code>app</code> argument.</p>
+<h2 id="utilssetclipboardtexttext"><code>utils.SetClipboardText(text)</code><a class="headerlink" href="#utilssetclipboardtexttext" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>No return value.</p>
+<h2 id="utilsshowpopupmessagemessage-title"><code>utils.ShowPopupMessage(message[, title])</code><a class="headerlink" href="#utilsshowpopupmessagemessage-title" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td><code>string</code></td>
+<td>Default <code>JScript Panel 3</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>No return value.</p>
+<h2 id="utilstextboxprompt-title-default_value-help_text"><code>utils.TextBox(prompt, title[, default_value, help_text])</code><a class="headerlink" href="#utilstextboxprompt-title-default_value-help_text" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>prompt</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>title</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>default_value</td>
+<td><code>string</code></td>
+<td>Defaults to an empty string if omitted.</td>
+</tr>
+<tr>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> 3.8.4</td>
+<td>help_text</td>
+<td><code>string</code></td>
+<td>Defaults to an empty string it omitted. If not empty, a <code>Help</code> button will show in the dialog. If <code>help_text</code> begins with <code>http</code>, it will launch a web browser otherwise it will open a popup window containing the text.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>.</p>
+<p>This offers a multi-line text edit area.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This always throws an error if cancelled so you must use <code>try/catch</code>.</p>
+</div>
+<h2 id="utilstimestamptodatestringts"><code>utils.TimestampToDateString(ts)</code><a class="headerlink" href="#utilstimestamptodatestringts" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ts</td>
+<td><code>number</code></td>
+<td>Should be the number of seconds since 00:00:00 Thursday, 1 January 1970 UTC.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>string</code>. It will be adjusted to your local time zone.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">Now</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">TimestampToDateString</span><span class="p">(</span><span class="nx">now</span><span class="p">));</span>
+</code></pre></div>
+</div>
+<h2 id="utilswriteinipath-section-key-value"><code>utils.WriteINI(path, section, key, value)</code><a class="headerlink" href="#utilswriteinipath-section-key-value" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td>The parent folder must already exist.</td>
+</tr>
+<tr>
+<td>section</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>key</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nx">utils</span><span class="p">.</span><span class="nx">WriteINI</span><span class="p">(</span><span class="s2">&quot;e:\\my_file.ini&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Last.fm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<h2 id="utilswritetextfilepath-content"><code>utils.WriteTextFile(path, content)</code><a class="headerlink" href="#utilswritetextfilepath-content" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td>The parent folder must already exist.</td>
+</tr>
+<tr>
+<td>content</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a <code>boolean</code> value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Files are written as <code>UTF8</code> without <code>BOM</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022-2024 marc2003
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/marc2k3" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
